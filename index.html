@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royal Enfied Mar del Plata</title>
-    <link rel="shortcut icon" href="./img/nav/logo-rojo.png"  >
+    <link rel="shortcut icon" href="./img/nav/image.png"  >
     <meta name="description" content="Distribuidores oficiales de Royal Enfield en la ciudad de Mar del Plata. 
     Concesionario, concept store y servicio oficial de la mítica marca, donde podrás encontrar su gama completa de motos,
      recambios originales, accesorios, ropa y equipamiento en la ciudad de Mar del Plata.">
@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img id="logo" src="img/nav/logo-rojo.png" alt="Logo Concesionario">
+                <img id="logo" src="img/nav/image.png" alt="Logo Concesionario">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
                 <ul class="navbar-nav ms-auto">
                    
                     <li class="nav-item"><a class="nav-link" href="#motos">Motos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://nsm.store.royalenfield.com.ar/es-AR/motos" target="_blank"  >Tienda</a></li>
                     <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
                     <li class="nav-item"><a class=" btn-nav" href="#form">Contacto</a></li>
                 </ul>
@@ -44,25 +44,27 @@
         </div>
     </nav>
 
-    <!---------------- Hero con Carrusel de Novedades -->
-    <section class="hero">
+      <!---------------- Hero con Carrusel de Novedades -->
+      <section class="hero">
         <div id="novedadesCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item carousel-hero active">
                     <div class="carousel-content">
-                        <img src="img/hero/new Himalayan - 4 Right View.png" class="moto-img" loading="lazy"  alt="moto Himalayan">
+                        <img src="img/hero/new Himalayan - 4 Right View.png" class="moto-img moto-hero" loading="lazy"
+                            alt="moto Himalayan">
                         <div class="carousel-text">
-                            <h5 class="animated-text">Himalayan 450</h5>
+                            <img  class="animated-text  logo-hero" src="img/gama/logo-himalayan-blanco.png" alt="">
                             <p class="animated-text">Reservá la tuya</p>
                             <a href="#form" class="btn-moto-link">Contactanos</a>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item  carousel-hero">
                     <div class="carousel-content">
-                        <img src="img/hero/Shotgun 650 - Stencil White(6).webp" class="moto-img" loading="lazy" alt="Shotgun">
+                        <img src="img/hero/Shotgun 650 - Stencil White(6).webp" class="moto-img moto-hero"
+                            loading="lazy" alt="Shotgun">
                         <div class="carousel-text">
-                            <h5 class="animated-text">Shotgun 650</h5>
+                            <img class="animated-text logo-hero" src="img/gama/logo-shotgun-blanco.png" alt="logo shotgun">
                             <p class="animated-text">Reservá la tuya </p>
                             <a href="#form" class="btn-moto-link">Contactanos</a>
                         </div>
@@ -82,147 +84,122 @@
         </div>
     </section>
     <!-- gama motos------------------------------------- -->
-    <section  id="motos"  class="modelos-section">
-        <div class="container">
-            <h2 class="text-center title-gama">Nuestra gama de Motos</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="shotgun" class="card">
-                        <img src="img/gama/Shotgun 650 - Green Drill(3).webp"  loading="lazy"  alt="moto shotgun" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Shotgun 650</h5>
-                        </div>
+    <!-- Carrousel de motos. ---------------------------->
+    <section id="motos" class="custom-carousel">
+        <div class="slider-wrapper">
+            <div class="slider-container">
+                <!-- Tarjeta 1 -->
+                <a  href="https://nsm.store.royalenfield.com.ar/es-AR/motos" target="_blank" class="slider-item">
+
+                    <div id="shotgun" class="content">
+                        <img src="./img/gama/logo-shotgun-blanco.png" alt="Logo Shotgun" class="logo">
+                        <img src="./img/gama/Shotgun 650 - Green Drill(3).webp" alt="Moto Shotgun" class="gama-moto">
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="super-meteor"   class="card">
-                        <img src="img/gama/super-meteor-650-celestial_red_036.webp" loading="lazy" alt="super meteor 650" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Super Meteor 650</h5>
-                        </div>
+                </a>
+                <!-- Tarjeta 2 -->
+                <a  href="https://nsm.store.royalenfield.com.ar/es-AR/motos/continental-gt-650-aleacion/reserve"
+                    target="_blank" class="slider-item">
+                    <div id="continental" class="content">
+                        <img src="img/gama/logo_continental.png" alt="Logo Moto 2" class="logo">
+                        <img src="./img/gama/Continental-650-mr_clean_000.png" alt="Moto Continental 650"
+                            class="gama-moto">
                     </div>
-                </div>
+                </a>
+                <!-- Tarjeta 3 -->
+                <a href="https://nsm.store.royalenfield.com.ar/es-AR/motos/super-meteor-650/reserve" target="_blank"
+                    class="slider-item">
+
+                    <div id="super_meteor" class="content">
+                        <img src="./img/gama/logo-super-meteor-blanco.png" alt="Logo Super Meteor" class="logo">
+                        <img src="./img/gama/super-meteor-650-2.webp" alt="Moto Super Meteor 650" class="gama-moto">
+                    </div>
+                </a>
+                <!-- Tarjeta 4 -->
+                <a href="https://nsm.store.royalenfield.com.ar/es-AR/motos/interceptor-650-aleacion/reserve"
+                    target="_blank" class="slider-item">
+
+                    <div id="interceptor" class="content">
+                        <img src="./img/gama/logo_interceptor.png" alt="Logo Interceptor" class="logo">
+                        <img src="./img/gama/Interceptor-RavishingBlk_000.webp" alt="Moto Interceptor"
+                            class="gama-moto">
+                    </div>
+                </a>
+                <!-- Continúan los items... -->
+                <!-- Tarjeta 5 -->
+                <a href="https://nsm.store.royalenfield.com.ar/es-AR/motos/himalayan/reserve" target="_blank"
+                    class="slider-item">
+
+                    <div id="himalayan"  class="content">
+                        <img src="./img/gama/logo-himalayan-blanco.png" alt="Logo Himalayan" class="logo">
+                        <img src="./img/gama/All-new Himalayan - Kamet White - Right Profile.webp" alt="Moto Himalayan"
+                            class="gama-moto">
+                    </div>
+                </a>
+                <!-- Tarjeta 6 -->
+                <a href="https://nsm.store.royalenfield.com.ar/es-AR/motos/graphite-yellow-1/reserve" target="_blank"
+                    class="slider-item">
+
+                    <div id="scram" class="content">
+                        <img src="./img/gama/logo-scram.png" alt="Logo Scram" class="logo">
+                        <img src="./img/gama/Scram_Red_000.webp" alt="Moto Scram" class="gama-moto">
+                    </div>
+                </a>
+                <!-- Tarjeta 7 -->
+                <a href="https://nsm.store.royalenfield.com.ar/es-AR/motos" target="_blank" class="slider-item">
+
+                    <div  id="classic" class="content">
+                        <img src="./img/gama/logo-classic-marron.png" alt="Logo Classic" class="logo">
+                        <img src="./img/gama/Classic_350_SignalsDessert_000.webp" alt="Moto Classic 350"
+                            class="gama-moto">
+                    </div>
+                </a>
+                <!-- Tarjeta 8 -->
+                <a href="https://nsm.store.royalenfield.com.ar/es-AR/motos/meteor-350/reserve" target="_blank"
+                    class="slider-item">
+
+                    <div id="meteor" class="content">
+                        <img src="./img/gama/logo-meteor-350-blanco.png" alt="Logo Meteor 350" class="logo">
+                        <img src="./img/gama/meteor_350.png" alt="Moto Meteor 350" class="gama-moto">
+                    </div>
+                </a>
+                <!-- Tarjeta 9 -->
+                <a href="https://nsm.store.royalenfield.com.ar/es-AR/motos/rebel-blue/reserve" target="_blank"
+                    class="slider-item">
+
+                    <div id="hunter"  class="content">
+                        <img src="./img/gama/logo-hntr-blanco.png" alt="Logo HNTR" class="logo">
+                        <img src="./img/gama/HNTR_GTred_000.webp" alt="Moto HNTR" class="gama-moto">
+                    </div>
+                </a>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="continental"  class="card">
-                        <img src="img/gama/Continental-650-mr_clean_000.png" loading="lazy" alt="continental 650" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Continental GT650</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="interceptor" class="card">
-                        <img src="img/gama/Interceptor-RavishingBlk_000.webp" loading="lazy" alt="interceptor" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Interceptor 650</h5>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <!-- Botones de navegación -->
+        <button class="custom-prev" onclick="prevSlide()">❮</button>
+        <button class="custom-next" onclick="nextSlide()">❯</button>
+    </section>
+
+     <!-- Eventos-------------------------------------------------------- -->
+     <section class="section-eventos">
+        <h2 class="section-eventos-title">Descubrí lo que podes hacer con tu Royal Enfield</h2>
+        <div class="eventos-container">
+            <div class="eventos-item">
+                <img src="img/eventos/Eventos.webp" alt="Eventos">
+                <div class="eventos-title">Eventos</div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="himalayan"  class="card">
-                        <img src="img/gama/All-new Himalayan - Kamet White - Right Profile.webp" loading="lazy"    alt="himalayan" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">New Himalayan 450</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="scram" class="card">
-                        <img src="img/gama/Scram_Red_000.webp" loading="lazy"   alt="scram" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Scram 411</h5>
-                        </div>
-                    </div>
-                </div>
+            <div class="eventos-item">
+                <img src="img/eventos/Rides.webp" alt="Rides">
+                <div class="eventos-title">Rides</div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="meteor" class="card">
-                        <img src="img/gama/Meteor_Fireball Red_Side(1).webp"  loading="lazy" alt="meteor" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Meteor 350</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="hunter"   class="card">
-                        <img src="img/gama/HNTR_GTred_000.webp" alt="moto HNTR" loading="lazy" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">HNTR 350</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="classic" class="card">
-                        <img src="img/gama/Classic_350_SignalsDessert_000.webp" loading="lazy" alt="classic" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Classic 350</h5>
-                        </div>
-                    </div>
-                </div>
-                
+            <div class="eventos-item">
+                <img src="img/eventos/Viajes.webp" alt="Viajes">
+                <div class="eventos-title">Viajes</div>
             </div>
         </div>
     </section>
-     <!-- discover------------------------------------- -->
-  
-     <section id="discover-section" class="py-5">
-        <div class="container">
-          <h2 class="text-center mb-4">Descubrí lo que podés hacer con tu Royal Enfield</h2>
-          <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
-            <!-- Indicadores personalizados -->
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-      
-            <!-- Carrusel personalizado -->
-            <div class="carousel-inner">
-              <!-- Slide 1 -->
-              <div  class="carousel-item carousel-discover active">
-                <img src="img/financia/0B3A8506-A.webp" class="custom-img d-block w-100" alt="Eventos">
-                <div class="custom-carousel-caption text-start">
-                  <h3 class="custom-carousel-title"></h3>
-                </div>
-              </div>
-              <!-- Slide 2 -->
-              <div  class="carousel-item carousel-discover  ">
-                <img src="img/financia/0B3A5637-A.webp" class="custom-img d-block w-100" alt="Rides">
-                <div class="custom-carousel-caption text-start">
-                  <h3 class="custom-carousel-title"></h3>
-                </div>
-              </div>
-              <!-- Slide 3 -->
-              <div  class="carousel-item carousel-discover  ">
-                <img src="img/financia/Copy of 020A1769.webp" class="custom-img d-block w-100" alt="Rides">
-                <div class="custom-carousel-caption text-start">
-                  <h3 class="custom-carousel-title"></h3>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Controles del carrusel (flechas personalizadas) -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
-          </div>
-        </div>
-      </section>
-      
+    
+   
 
-    <!-- Formulario de Contacto------------------------------------- -->
+    <!-- Formulario de Contacto----------------------------------------------- -->
     <section class="mt-5 contact-section">
         <div class="container-fluid"> <!-- Usando container-fluid para eliminar padding -->
             <div class="row no-gutters align-items-stretch"> <!-- Eliminando el espacio entre columnas -->

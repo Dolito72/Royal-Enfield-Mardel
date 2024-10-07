@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  royalTandil:
+    image: dolito72/royalenfieldtandil:v3
+    ports:
+      - "80:80"
+    restart: unless-stopped
+
+  royalMardel:
+    image: dolito72/royalenfieldmardelplata:v2
+    ports:
+      - "3001:80"
+    restart: unless-stopped

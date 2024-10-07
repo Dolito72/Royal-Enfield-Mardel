@@ -32,6 +32,7 @@
     box-sizing: border-box;
     font-family: var(--font);
     text-decoration: none;
+
 }
 
 body {
@@ -76,10 +77,7 @@ body {
     /* Aumenta el logo al pasar el mouse */
 }
 
-.navbar.scrolled .navbar-brand img {
-    height: 40px;
-    /* Se reduce el logo al hacer scroll */
-}
+
 
 /* Links de navegación */
 .navbar .nav-link {
@@ -117,7 +115,7 @@ body {
 
 
 /* --------------------------------Sección Hero---------------------------------------- */
-.carousel-item {
+.carousel-hero {
     background-image: url('../img/hero/fondo-hero.jpeg');
     /* Reemplaza con tu imagen */
     background-size: cover;
@@ -135,7 +133,7 @@ body {
     background-color: var(--negro);
 }
 
-.carousel-item {
+.carousel-hero {
     position: relative;
     background-color: var(--gris);
     /* Fondo negro por defecto */
@@ -146,7 +144,7 @@ body {
 
 
 /* Imagen de la moto */
-.moto-img {
+.moto-hero {
     width: 100%;
     /* Full width en mobile */
     max-width: 400px;
@@ -158,6 +156,9 @@ body {
     transition: all 1s ease-in-out;
 }
 
+.logo-hero{
+    width: 150px;
+}
 /* Texto sobre la moto */
 .carousel-text {
     position: relative;
@@ -190,7 +191,7 @@ body {
 }
 
 /* Animación activa */
-.active .moto-img {
+.active .moto-hero {
     opacity: 1;
     transform: translateX(0);
 }
@@ -200,129 +201,230 @@ body {
     transform: translateY(0);
 }
 
-/*-------------------------------------gama motos--------------------------------*/
-.modelos-section {
-    background-color: var(--negro);
-    /* Fondo negro para la sección */
-    padding: 20px 4px;
-    /* Espaciado arriba y abajo */
-}
-
-.title-gama {
-    color: var(--rojo);
-    /* Título en rojo */
-    margin-bottom: 20px;
-    /* Espacio inferior del título */
-    font-weight: 900;
-}
-
-.card {
-    background-color: #3A3A3A;
-    /* Fondo gris más oscuro */
-    margin: 10px 0;
-    /* Espacio vertical entre tarjetas */
-    border: none;
-    /* Sin borde */
-    height: 350px;
-    /* Altura de la tarjeta */
-    height: auto;
-    /* Permite que la altura de la tarjeta se ajuste automáticamente */
-}
-
-.card-img-top {
-    height: 70%;
-    /* Ajusta la altura de la imagen en relación a la tarjeta */
-    object-fit: cover;
-    /* Mantiene la proporción de la imagen */
-    width: 100%;
-    /* Asegura que la imagen ocupe todo el ancho */
-    transition: transform 0.5s ease;
-    /* Transición suave para la imagen */
-}
-
-.card-img-top:hover {
-    transform: scale(1.05);
-    /* Escala al 110% al hacer hover */
-}
-
-.card-body {
-    height: 30%;
-    /* Ajusta la altura del cuerpo de la tarjeta */
+/*-------------------------------------gama carrousel motos--------------------------------*/
+/* Contenedor general del slider */
+.slider-container {
     display: flex;
-    /* Flexbox para centrar contenido */
-    justify-content: center;
-    /* Centra horizontalmente */
-    align-items: center;
-    /* Centra verticalmente */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin: 2%;
+
+    gap: 0.5cm;
+    width: 100%;
+    background-color: var(--negro);
+    scroll-behavior: smooth;
+    /* Añadimos esto para suavizar el desplazamiento */
 }
 
-.card-title {
-    color: var(--blanco);
-    /* Color blanco para el nombre del modelo */
-    font-size: 1.5rem;
-    /* Tamaño de fuente en mobile */
-    font-weight: bold;
-    /* Fuente en negrita */
+.slider-container::-webkit-scrollbar {
+    display: none;
+    /* Oculta la barra de desplazamiento */
+}
+
+
+.slider-wrapper {
+    overflow: hidden;
+    position: relative;
+    margin-right: 2%;
+
+}
+
+.slider-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 90%;
+    /* Ajuste para mobile */
+    max-width: 90%;
+    padding: 20px;
+    background-size: cover;
+    /* Asegura que la imagen de fondo cubra todo el área */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+    overflow: hidden;
+    /* Para que el fondo no se salga de los bordes redondeados */
     text-align: center;
-    /* Centra el texto */
-    margin-top: 10px;
-    /* Espacio superior */
+    position: relative;
+    transition: transform 0.8s ease;
+    cursor: pointer;
 }
 
-/*----------------------------- discover------------------------------*/
+/* Tarjetas con diferentes fondos */
+.slider-item:nth-child(1) {
+    background-image: linear-gradient(to bottom, var(--negro), transparent),
+    linear-gradient(to top, var(--negro), transparent),
+    url('../img/gama/fondo-amanecer.png');
+
+}
+
+.slider-item:nth-child(2) {
+    background-image: linear-gradient(to bottom, var(--negro), transparent),
+    linear-gradient(to top, var(--negro), transparent),
+    url('../img/gama/fondo-gris.jpg');
+}
+
+.slider-item:nth-child(3) {
+    background-image: linear-gradient(to bottom, var(--negro), transparent),
+    linear-gradient(to top, var(--negro), transparent),
+        url('../img/gama/fondo-gris.jpg');
+}
+
+.slider-item:nth-child(4) {
+    background-image: linear-gradient(to bottom, var(--negro), transparent),
+    linear-gradient(to top, var(--negro), transparent),
+        url('../img/gama/fondo-cielo.jpg');
+}
+
+.slider-item:nth-child(5) {
+    background-image: linear-gradient(to bottom, var(--negro), transparent),
+    linear-gradient(to top, var(--negro), transparent),
+        url('../img/gama/fondo-atardecer.jpg');
+}
+
+.slider-item:nth-child(6) {
+    background-image: linear-gradient(to bottom, var(--negro), transparent),
+    linear-gradient(to top, var(--negro), transparent),
+        url('../img/gama/fondo-ruta.jpg');
+}
+
+.slider-item:nth-child(7) {
+    background-image: linear-gradient(to bottom, var(--negro), transparent),
+    linear-gradient(to top, var(--negro), transparent),
+        url('../img/gama/fondo-borroso-velocidad.jpg');
+}
+
+.slider-item:nth-child(8) {
+    background-image: linear-gradient(to bottom, var(--negro), transparent),
+    linear-gradient(to top, var(--negro), transparent),
+        url('../img/gama/fondo-marron.jpg');
+}
+
+.slider-item:nth-child(9) {
+    background-image: linear-gradient(to bottom, var(--negro), transparent),
+    linear-gradient(to top, var(--negro), transparent),
+        url('../img/gama/fondo-gris.jpg');
+}
+
+
+/* Imagen de la moto */
+.gama-moto {
+    width: 400px;
+    max-height: 300px;
+    /* Ajustar según la necesidad */
+    object-fit: contain;
+    /* Mantener la proporción de la imagen */
+    margin: 20px auto 0 auto;
+    /* Centrar la imagen horizontalmente */
+    display: block;
+    padding-right: 40px;
+    transition: transform 0.5s ease;
+    /* Transición para el movimiento */
+    flex-basis: 70%;
+    /* La moto ocupará el 70% del espacio disponible */
+}
+
+/* Efecto de hover para mover la imagen de la moto */
+.slider-item:hover .gama-moto {
+    transform: translateX(30px);
+    /* Mover a la derecha */
+}
+
+
+/* Logo más grande */
+.logo {
+    flex-basis: 30%;
+    max-width: 30%;
+    /* Asegura que el logo no sobrepase el 30% del ancho */
+    max-height: 15%;
+    /* Limita el tamaño máximo del logo verticalmente */
+    margin-bottom: 10px;
+}
+
+/* Botones de navegación */
+.custom-prev,
+.custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 30;
+
+    top: 100%;
+    /* Ajusta la posición si es necesario */
+}
+
+
+.custom-prev {
+    left: 10px;
+}
+
+.custom-next {
+    right: 10px;
+}
+
+/*----------------------------- Eventos------------------------------*/
 /* Estilo para la sección */
+/* Estilos generales para la sección */
+.section-eventos {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  
+}
 
-#discover-section {
-    background-color: var(--negro);
-    color: var(--rojo);
+.section-eventos-title {
+    font-size: 1.5rem;
     margin-bottom: 20px;
-    /* Espacio inferior del título */
-    font-weight: 900;
-
+    color: var(--blanco);
 }
 
-#discover-section h2 {
-    font-weight: 600;
-    font-size: 24px;
+/* Estilos para las imágenes */
+.eventos-container {
+    display: flex;
+    flex-direction: column; /* Mobile-first: imágenes una debajo de la otra */
+    gap: 10px; /* Espacio entre las imágenes */
 }
 
-.carousel-discover {
-    background-color: var(--negro);
+.eventos-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-/* Imagen del carrusel personalizado */
-.custom-img {
-    object-fit: cover;
-    height: 400px;
-    /* Para mobile */
+.eventos-item img {
+    width: 100%;
+    transition: transform 0.3s ease;
 }
 
-
-
-/* Título personalizado del carrusel */
-.custom-carousel-caption {
+/* Estilo del título de la imagen (oculto por defecto) */
+.eventos-title {
     position: absolute;
     top: 20%;
-    /* Ajusta la posición del texto para que esté arriba de la imagen */
-    left: 10%;
-    right: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: var(--blanco);
-
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: 0; /* Ocultar el título inicialmente */
+    transition: opacity 0.2s ease;
 }
 
-.custom-carousel-title {
-    font-size: 1.5rem;
-    /* Tamaño de texto para mobile */
+/* Efecto de hover en la imagen */
+.eventos-item:hover img {
+    transform: scale(1.2); /* Agrandar la imagen al hacer hover */
 }
 
-@media (min-width: 768px) {}
-
-
-/* Ajustes para controles (flechas) si es necesario personalizar más */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
+.eventos-item:hover .eventos-title {
+    opacity: 1; /* Mostrar el título al hacer hover */
 }
 
 
@@ -332,7 +434,7 @@ body {
     background-image: url('../img/form/fondo_form.jpg');
     background-size: cover;
     background-position: center;
-    padding: 30px 30px;
+    padding: 50px 35px;
     /* Elimina el padding a los lados */
 
     font-size: 16px;
@@ -374,11 +476,10 @@ button.btn-warning {
 }
 
 
-
 .contact-info-container {
     background-color: rgba(255, 255, 255, 0.9);
     /* Fondo blanco translúcido */
-    padding: 20px;
+    padding: 30px;
     /* Ajuste de padding */
     height: 100%;
     /* Para igualar la altura con el formulario */
@@ -494,10 +595,6 @@ iframe {
 
 }
 
-.footer-contacto p {
-    font-size: 14px;
-}
-
 .footer-bottom {
     font-size: smaller;
     font-weight: 100;
@@ -543,10 +640,12 @@ iframe {
 }
 
 /*--------Hasta 900px para cubrir todo tipo de móviles (vertical y horizontal).------------------*/
+/* Landscape para dispositivos con ancho mayor a 480px y en modo horizontal */
+@media only screen and (max-width: 900px) and (orientation: landscape) {
 
-@media (max-width: 900px) and (orientation: landscape) {
 
     /*------------------- Navbar ------------------------------------------------------------*/
+
     .navbar {
         padding: 5px;
     }
@@ -581,7 +680,7 @@ iframe {
 
 
     /* --------------------------------Sección Hero---------------------------------------- */
-    .carousel-item {
+    .carousel-hero {
         background-image: url('../img/hero/fondo-hero.jpeg');
         /* Reemplaza con tu imagen */
         background-size: cover;
@@ -599,7 +698,7 @@ iframe {
         background-color: var(--negro);
     }
 
-    .carousel-item {
+    .carousel-hero {
         position: relative;
         background-color: var(--gris);
         /* Fondo negro por defecto */
@@ -610,7 +709,7 @@ iframe {
 
 
     /* Imagen de la moto */
-    .moto-img {
+    .moto-hero {
         width: 100%;
         /* Full width en mobile */
         max-width: 400px;
@@ -653,7 +752,7 @@ iframe {
     }
 
     /* Animación activa */
-    .active .moto-img {
+    .active .moto-hero {
         opacity: 1;
         transform: translateX(0);
     }
@@ -664,90 +763,67 @@ iframe {
     }
 
     /*-------------------------------------gama motos--------------------------------*/
-    .modelos-section {
-        background-color: var(--gris);
-        /* Fondo negro para la sección */
-        padding: 20px 4px;
-        /* Espaciado arriba y abajo */
-    }
-
-    .title-gama {
-        color: var(--rojo-oscuro);
-        /* Título en rojo */
-        margin-bottom: 20px;
-        /* Espacio inferior del título */
-        font-weight: 900;
-    }
-
-    .card {
-        background-color: #3A3A3A;
-        /* Fondo gris más oscuro */
-        margin: 10px 0;
-        /* Espacio vertical entre tarjetas */
-
-        border: none;
-        /* Sin borde */
-        height: 350px;
-        /* Altura de la tarjeta */
-        overflow: hidden;
-        /* Evita que el contenido sobresalga de la tarjeta */
-    }
-
-    .card-img-top {
-        height: 70%;
-        /* Ajusta la altura de la imagen en relación a la tarjeta */
-        object-fit: cover;
-        /* Mantiene la proporción de la imagen */
-        width: 100%;
-        /* Asegura que la imagen ocupe todo el ancho */
-        transition: transform 0.3s ease;
-        /* Transición suave para la imagen */
-
-
-    }
-
-
-
-
-    .card-img-top:hover {
-        transform: scale(1.05);
-        /* Escala al 110% al hacer hover */
-    }
-
-    .card-body {
-        height: 30%;
-        /* Ajusta la altura del cuerpo de la tarjeta */
-        display: flex;
-        /* Flexbox para centrar contenido */
-        justify-content: center;
-        /* Centra horizontalmente */
+    .slider-item {
+        flex-direction: row;
+        /* Coloca el contenido (logo y moto) en fila */
+        justify-content: space-between;
+        /* Asegura que el logo y la moto se separen */
         align-items: center;
-        /* Centra verticalmente */
+        /* Alinea logo y moto verticalmente */
+
+        padding: 0 20px;
+        /* Añade espacio a los lados */
+        height: 80vh;
+        /* Ajusta la altura en landscape si es necesario */
     }
 
-    .card-title {
-        color: var(--blanco);
-        /* Color blanco para el nombre del modelo */
-        font-size: 1.5rem;
-        /* Tamaño de fuente en mobile */
-        font-weight: bold;
-        /* Fuente en negrita */
-        text-align: center;
-        /* Centra el texto */
-        margin-top: 10px;
-        /* Espacio superior */
+    /* Ajusta la imagen de la moto para landscape */
+    .gama-moto {
+        flex-basis: 70%;
+        /* La moto ocupará el 70% del espacio disponible */
+        width: 70%;
+        /* Tamaño adecuado de la moto en landscape */
+        max-height: 100%;
+        /* Para que no sobrepase la altura del contenedor */
+        margin-top: 0;
+        /* Elimina márgenes superiores */
+        padding-bottom: 8%;
+        align-self: center;
+
     }
 
-    /*-----------------------------discover------------------------------*/
-    .custom-img {
-        height: 500px;
-        /* Para landscape */
+    /* Logo al costado de la moto */
+    .logo {
+        padding-top: 2%;
+        flex-basis: 10%;
+        /* El logo ocupará el 30% del espacio disponible */
+        max-width: 10%;
+        /* Asegura que el logo no sobrepase el 30% del ancho */
+        max-height: 10%;
+        /* Limita el tamaño máximo del logo verticalmente */
+        align-self: center;
+        /* Alinea el logo verticalmente con la moto */
+        margin-right: 5px;
+        /* Espacio entre logo y moto */
+        object-fit: contain;
+        /* Asegura que el logo mantenga su relación de aspecto */
     }
 
-    .custom-carousel-title {
-        font-size: 2rem;
-        /* Tamaño para landscape */
+    /*  botones de navegación  más arriba, ajustar la propiedad top */
+    .custom-prev,
+    .custom-next {
+        position: absolute;
+        top: 160%;
+        /* Ajusta la posición para que se vean mejor */
+        transform: translateY(-50%);
+        z-index: 1;
     }
+
+    /*-----------------------seccion eventos----------------------*/
+    /* Estilos para las imágenes */
+    .eventos-container {
+        flex-direction: row; /* Alinear imágenes horizontalmente en pantallas grandes */
+     }
 
     /*------------------Seccion form y contacto---------------------------------------------------------------------------*/
     .contact-section {
@@ -796,8 +872,7 @@ iframe {
     .contact-info-container {
         background-color: rgba(255, 255, 255, 0.9);
         /* Fondo blanco translúcido */
-        padding-top: 30px;
-        padding-left: 10px;
+        padding: 16px;
         /* Ajuste de padding */
         height: 100%;
         /* Para igualar la altura con el formulario */
@@ -806,7 +881,7 @@ iframe {
         width: 100%;
         display: flex;
         flex-direction: column;
-        font-size: 0.8rem;
+        font-size: 1 rem;
         justify-content: space-between;
         color: var(--gris-oscuro);
     }
@@ -972,13 +1047,13 @@ iframe {
     /*-------------------------------------nav------------------------------*/
 
     .navbar {
-        padding: 6px;
+        height: 100px;
 
 
     }
 
     #logo {
-        width: 120px;
+        width: 100px;
         /* Aumenta el tamaño del logo */
         height: auto;
         /* Mantiene las proporciones */
@@ -1010,7 +1085,7 @@ iframe {
 
     /*--------------------------seccion hero------------------------------------------*/
     /* Opción 2: Fondo con imagen y capa semitransparente */
-    .carousel-item {
+    .carousel-hero {
         background-image: url('../img/hero/fondo-hero.jpeg');
         /* Reemplaza con tu imagen */
         background-size: cover;
@@ -1019,7 +1094,7 @@ iframe {
     }
 
     /* Capa semitransparente sobre la imagen */
-    .carousel-item::before {
+    .carousel-hero::before {
         content: "";
         position: absolute;
         top: 0;
@@ -1040,7 +1115,7 @@ iframe {
     }
 
     /* Imagen de la moto en tablet/desktop */
-    .moto-img {
+    .moto-hero {
         width: 75%;
         /* Ajustamos para que ocupe más espacio en desktop */
         max-width: none;
@@ -1049,6 +1124,9 @@ iframe {
         z-index: 2;
     }
 
+    .logo-hero{
+        width: 300px;
+    }
     /* Texto en tablet/desktop */
     .carousel-text {
         position: absolute;
@@ -1128,49 +1206,66 @@ iframe {
     }
 
     /*---------------------------------seccion modelos motos-----------------------------------------*/
-    .card {
-        margin: 20px auto;
-        /* Centrar tarjetas en desktop */
-        height: 500px;
-        /* Altura de la tarjeta en desktop */
-        width: 550px;
-        /* Ancho de la tarjeta */
+    /* Estilos para los items del carrusel en desktop */
+    .slider-wrapper {
+        margin: 10px;
     }
 
-    .card-img-top {
-        height: 80%;
-        /* Aumenta la altura de la imagen en desktop */
-    }
-
-    .card-title {
-        font-size: 1.8rem;
-        /* Tamaño de fuente más grande en desktop */
-    }
-
-    .row {
+    .slider-item {
+        flex: 0 0 25%;
+        /* Ocupa el 25% del ancho en desktop */
+        max-width: 25%;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        /* Centra la fila en desktop */
+        align-items: center;
+        box-sizing: border-box;
+        padding: 20px;
+        transition: transform 0.5s ease;
     }
 
-    /*---------------------------discover-----------------------------------*/
-    #discover-section h2 {
-        font-size: 30px;
-        margin-bottom: 20px;
-        /* Espacio inferior del título */
-        font-weight: 900;
-
+    /* Imagen de la moto */
+    .gama-moto {
+        width: 600px;
+        max-height: 300px;
+        /* Ajustar según la necesidad */
+        object-fit: contain;
+        /* Mantener la proporción de la imagen */
+        margin: 20px auto 0 auto;
+        /* Centrar la imagen horizontalmente */
+        display: block;
     }
 
-    .custom-img {
-        width: 100%;
-        height: 600px;
-
+ 
+    /* Logo */
+    .logo {
+        width: auto;
+        /* Permite que el logo se ajuste según su proporción */
+        max-width: 190px;
+        /* Controlamos el ancho máximo del logo */
+        max-height: 120px;
+        /* Limitar la altura para evitar que sea demasiado alto */
+        margin: 10px auto;
+        /* Espacio entre el logo y la moto */
+        display: block;
+        object-fit: contain;
+        /* Para que los logos mantengan su proporción */
     }
 
-    .custom-carousel-title {
-        font-size: 3rem;
-        /* Tamaño para desktop */
+    .custom-prev,
+    .custom-next {
+        font-size: 4rem;
+        top: 140%;
+        /* Ajusta la posición si es necesario */
     }
+    /*-----------------------seccion eventos--------------------------*/
+    .eventos-container {
+        flex-direction: row; /* Alinear imágenes horizontalmente en pantallas grandes */
+     }
+     .section-eventos-title{
+         font-weight: 900;
+         font-size: 2rem;
+     }
 
 
 
@@ -1179,7 +1274,7 @@ iframe {
         color: var(--blanco);
         font-weight: 600;
         /* Asegúrate de que la variable esté definida */
-        font-size: 1.6em;
+        font-size: 1.6rem;
         /* Cambia el tamaño de fuente según tus preferencias */
         margin-top: 60px;
         /* Añade un margen superior para separar del contenido anterior */
@@ -1189,12 +1284,14 @@ iframe {
 
 
     .contact-section {
-        padding-top: 35px;
         font-size: 20px;
         /* Ajusta el tamaño de la fuente según sea necesario */
     }
-    .social-media-icons{
-        padding-left: 20px;
+
+    .social-media-icons {
+        padding-left: 40px;
+
+
     }
 
     /*----------------------------footer------------------------*/
@@ -1213,11 +1310,6 @@ iframe {
     .social-media-icons {
         padding-top: 30px;
         padding-right: 260px;
-    }
-
-    .footer-contacto p {
-        margin-bottom: 20px;
-        font-size: 20px;
     }
 
     .footer-bottom {
