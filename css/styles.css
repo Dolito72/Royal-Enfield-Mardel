@@ -415,6 +415,9 @@ body {
     display: block; /* Elimina el espacio en la parte inferior */
 }
 
+
+
+
 .play-button {
     position: absolute;
     top: 50%; /* Centrado vertical */
