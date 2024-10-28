@@ -77,7 +77,26 @@ body {
     /* Aumenta el logo al pasar el mouse */
 }
 
-
+.dropdown-menu{
+    background-color: #2c2c2c; 
+    
+}
+.dropdown-item{
+    background-color:  rgba(255, 255, 255, 0);
+    color: var(--blanco);
+  
+    padding-top: 15px;
+    /*text-transform: uppercase; /* Convertir texto a mayúsculas */
+    font-size: 1.1rem; /* Tamaño de letra más grande */
+    font-weight: 400;
+}
+.navbar .dropdown-item:hover {
+    background-color:  rgba(255, 255, 255, 0);
+    color: var(--rojo);
+   /* text-transform: uppercase; /* Convertir texto a mayúsculas */
+    font-size: 1.1rem; /* Tamaño de letra más grande */
+    font-weight: 600;
+}
 
 /* Links de navegación */
 .navbar .nav-link {
@@ -101,8 +120,19 @@ body {
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+
+transition:  transform 0.3s ease;
+
 }
 
+.navbar .nav-link:hover {
+color: var(--rojo);
+}
+
+.navbar .btn-nav:hover{
+transform: scale(1.1);
+
+}
 .navbar .nav-link:hover {
     color: var(--rojo);
 }
