@@ -161,6 +161,11 @@
     .card-container {
         grid-template-columns: repeat(2, 1fr);
     }
+     /* Centrar la última card cuando hay un total de 5 cards */
+     .card-container .card:nth-child(5) {
+        grid-column: 1 / -1; /* Ocupa ambas columnas */
+        justify-self: center; /* Centra la card sin expandir su ancho */
+    }
 
 }
 

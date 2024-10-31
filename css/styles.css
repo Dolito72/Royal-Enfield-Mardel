@@ -431,7 +431,7 @@ transform: scale(1.1);
 }
 
 .eventos-item img {
-    width: 100%;
+    width: 90%;
     transition: transform 0.3s ease;
 }
 
@@ -497,7 +497,7 @@ transform: scale(1.1);
 
 /* Efecto de hover en la imagen */
 .eventos-item:hover img {
-    transform: scale(1.2); /* Agrandar la imagen al hacer hover */
+    transform: scale(1.05); /* Agrandar la imagen al hacer hover */
 }
 
 .eventos-item:hover .eventos-title {
@@ -1289,7 +1289,7 @@ iframe {
         /* Texto blanco siempre */
         border-color: var(--rojo-oscuro);
         /* Cambia el borde a rojo oscuro al hacer hover */
-        transform: scale(1.3);
+        transform: scale(1.05);
         /* Efecto de escalado al pasar el ratón */
     }
 
