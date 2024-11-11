@@ -158,7 +158,7 @@ transform: scale(1.1);
 
 .carousel-hero {
     position: relative;
-    background-color: var(--gris);
+    
     /* Fondo negro por defecto */
     color: var(--blanco);
     /* Texto blanco por defecto */
@@ -169,6 +169,21 @@ transform: scale(1.1);
   
 }
 
+.carousel-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece el fondo con opacidad */
+    z-index: 1;
+}
+
+.carousel-content {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté encima de la capa oscura */
+}
 /* Fondo para cada slide específico */
 .fondo-himalayan {
     background-image: url('../img/hero/fondo-himalayan.jpg');
@@ -245,6 +260,10 @@ transform: scale(1.1);
     opacity: 1;
     transform: translateY(0);
 }
+
+.carousel-control-prev, .carousel-control-next {
+    z-index: 10; /* Coloca los botones por encima */
+}
 /*-------------------------------------gama carrousel motos--------------------------------*/
 /* Contenedor general del slider */
 .slider-container {
@@ -279,7 +298,7 @@ transform: scale(1.1);
     width: 90%;
     /* Ajuste para mobile */
     max-width: 90%;
-    padding: 20px;
+    padding: 10px;
     background-size: cover;
     /* Asegura que la imagen de fondo cubra todo el área */
     background-repeat: no-repeat;
@@ -396,7 +415,7 @@ transform: scale(1.1);
     background-color: rgba(0, 0, 0, 0.1);
     border: none;
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;
     padding: 10px;
     cursor: pointer;
     z-index: 30;
@@ -1175,62 +1194,76 @@ iframe {
 /*--------------------------seccion hero------------------------------------------*/
     /* Opción 2: Fondo con imagen y capa semitransparente */
     
+    .hero {
+        position: relative;
+        width: 100%;
+       
+        overflow: hidden;
+        background-color: var(--negro);
+    }
     
     .carousel-hero {
         background-size: cover;
         background-position: bottom;
         background-repeat: no-repeat;
-        height: 90vh;
+        height: 100vh;
     }
-
-    .carousel-hero .fondo-himalayan{
+    
+    .fondo-himalayan {
         background-image: url('../img/hero/fondo-himalayan.jpg');
     }
-
-    .carousel-hero .fondo-himalayan{
+    
+    .fondo-shotgun {
         background-image: url('../img/hero/fondo-shotgun.jpg');
     }
+    
     /* Capa semitransparente sobre la imagen */
     .carousel-hero::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.2);
-        /* Negro con 70% de transparencia */
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
         z-index: 1;
     }
-
-    /* Asegura que el contenido esté encima del fondo */
-    .carousel-caption {
-        position: relative;
-        z-index: 2;
-        color: var(--blanco);
-        /* Asegura que el texto siga siendo blanco */
-    }
+    
+    /* Contenido de cada slide */
     .carousel-content {
+        position: relative;
+        z-index: 3;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 20px; /* Asegura un padding lateral para ajustar contenido */
+        padding: 0 20px;
+        height: 100%;
     }
-    /* Imagen de la moto en tablet/desktop */
+    
     .moto-hero {
         width: 70%;
-        padding-right: 100px;
-        /* Ajustamos para que ocupe más espacio en desktop */
         max-width: none;
-        object-fit: cover;
-        /* Para que la imagen no se deforme */
-        z-index: 2;
+        object-fit: contain; /* Asegura que la imagen no se deforme */
+        padding-right: 150px;
+        margin-top: auto; /* Centra verticalmente si el contenedor tiene display flex */
+        margin-bottom: auto;
    
-
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 1s ease;
+        z-index: 3;
     }
+    
+    
+.active .moto-hero {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
     .logo-hero{
         width: 300px;
+        z-index: 4;
     }
     /* Texto en tablet/desktop */
     .carousel-text {
@@ -1246,6 +1279,10 @@ iframe {
         z-index: 5;
     }
 
+    .active .carousel-text {
+        opacity: 1;
+        transform: translateY(0);
+    }
     /* Título grande y llamativo */
     .carousel-text h5 {
         font-size: 4rem;
@@ -1314,7 +1351,7 @@ iframe {
     /*---------------------------------seccion modelos motos-----------------------------------------*/
     /* Estilos para los items del carrusel en desktop */
     .slider-wrapper {
-        margin: 10px;
+        margin: 5px;
     }
 
     .slider-item {
@@ -1326,7 +1363,7 @@ iframe {
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
-        padding: 20px;
+        padding: 10px;
         transition: transform 0.5s ease;
     }
 
@@ -1360,7 +1397,7 @@ iframe {
 
     .custom-prev,
     .custom-next {
-        font-size: 4rem;
+        font-size: 2rem;
         top: 140%;
         /* Ajusta la posición si es necesario */
     }

@@ -1,25 +1,24 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Selecciona el carrusel por ID
-    var carousel = document.querySelector('#novedadesCarousel');
+const carousel = document.getElementById('novedadesCarousel');
 
-    // Detecta el cambio de slide en el evento 'slide.bs.carousel'
-    carousel.addEventListener('slide.bs.carousel', function (e) {
-        // Elimina la animación de los elementos activos previos
-        var items = document.querySelectorAll('.carousel-hero');
-        items.forEach(function (item) {
-            item.querySelector('.moto-hero').classList.remove('active');
-            item.querySelectorAll('.animated-text').forEach(function (text) {
-                text.classList.remove('active');
-            });
-        });
+carousel.addEventListener('slide.bs.carousel', function (event) {
+    const currentSlide = event.relatedTarget;  // Slide que se va a mostrar
 
-        // Activa la animación para el nuevo slide
-        var nextItem = e.relatedTarget;
-        nextItem.querySelector('.moto-hero').classList.add('active');
-        nextItem.querySelectorAll('.animated-text').forEach(function (text) {
-            text.classList.add('active');
-        });
+    // Aplica la clase `active` solo al contenido del nuevo slide
+    const motoHero = currentSlide.querySelector('.moto-hero');
+    const textElements = currentSlide.querySelectorAll('.carousel-text');
 
-       
-    });
+    // Asegura que los elementos dentro del slide activo tengan las clases necesarias para la animación
+    setTimeout(() => {
+        motoHero.classList.add('active');
+        textElements.forEach(el => el.classList.add('active'));
+    }, 10); // El tiempo puede ajustarse
+
+    // Remueve las clases de animación del slide anterior
+    const prevSlide = document.querySelector('.carousel-item.active');
+    if (prevSlide) {
+        const prevMotoHero = prevSlide.querySelector('.moto-hero');
+        const prevTextElements = prevSlide.querySelectorAll('.carousel-text');
+        prevMotoHero.classList.remove('active');
+        prevTextElements.forEach(el => el.classList.remove('active'));
+    }
 });
