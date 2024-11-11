@@ -145,13 +145,6 @@ transform: scale(1.1);
 
 
 /* --------------------------------Sección Hero---------------------------------------- */
-.carousel-hero {
-    background-image: url('../img/hero/fondo-hero.jpeg');
-    /* Reemplaza con tu imagen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 .hero {
     position: relative;
@@ -170,11 +163,32 @@ transform: scale(1.1);
     color: var(--blanco);
     /* Texto blanco por defecto */
     padding: 10px;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  
 }
 
+/* Fondo para cada slide específico */
+.fondo-himalayan {
+    background-image: url('../img/hero/fondo-himalayan.jpg');
+}
+
+.fondo-shotgun {
+    background-image: url('../img/hero/fondo-shotgun.jpg');
+}
+.carousel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
 
 /* Imagen de la moto */
 .moto-hero {
+    order: 3;
     width: 100%;
     /* Full width en mobile */
     max-width: 400px;
@@ -191,6 +205,7 @@ transform: scale(1.1);
 }
 /* Texto sobre la moto */
 .carousel-text {
+    order: 1; /* Texto primero */
     position: relative;
     /* Cambiado a relativo para mobile */
     top: auto;
@@ -230,7 +245,6 @@ transform: scale(1.1);
     opacity: 1;
     transform: translateY(0);
 }
-
 /*-------------------------------------gama carrousel motos--------------------------------*/
 /* Contenedor general del slider */
 .slider-container {
@@ -402,8 +416,6 @@ transform: scale(1.1);
 
 
 /*----------------------------- Eventos------------------------------*/
-
-/* Estilos generales para la sección */
 .section-eventos {
     margin: 0;
     padding: 20px;
@@ -424,14 +436,17 @@ transform: scale(1.1);
     gap: 2px; /* Espacio entre las imágenes */
 }
 
-.eventos-item {
+
+.eventos-item, .eventos-video {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    width: 100%; /* Para pantallas pequeñas, ocupa el ancho completo */
 }
-
 .eventos-item img {
-    width: 90%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
@@ -443,9 +458,9 @@ transform: scale(1.1);
     width: 100%; /* Video se ajusta al contenedor */
     height: auto; /* Mantiene la proporción */
     display: block; /* Elimina el espacio en la parte inferior */
+    
+    object-fit: cover; /* Para ajustar la visualización */
 }
-
-
 
 
 .play-button {
@@ -497,14 +512,15 @@ transform: scale(1.1);
 
 /* Efecto de hover en la imagen */
 .eventos-item:hover img {
-    transform: scale(1.05); /* Agrandar la imagen al hacer hover */
+    transform: scale(1.1); /* Agrandar la imagen al hacer hover */
 }
 
+.eventos-video:hover .eventos-title {
+    opacity: 1; /* Mostrar el título al hacer hover */
+}
 .eventos-item:hover .eventos-title {
     opacity: 1; /* Mostrar el título al hacer hover */
 }
-
-
 
 /*------------------Seccion form y contacto---------------------------------------------------------------------------*/
 .contact-section {
@@ -757,40 +773,24 @@ iframe {
 
 
     /* --------------------------------Sección Hero---------------------------------------- */
-    .carousel-hero {
-        background-image: url('../img/hero/fondo-hero.jpeg');
-        /* Reemplaza con tu imagen */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    .carousel-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: right; /* Texto alineado a la izquierda */
+        
     }
 
-    .hero {
-        position: relative;
-        width: 100%;
-        height: auto;
-        min-height: 60vh;
-        overflow: hidden;
-        padding: 0px;
-        background-color: var(--negro);
-    }
-
-    .carousel-hero {
-        position: relative;
-        background-color: var(--gris);
-        /* Fondo negro por defecto */
-        color: var(--blanco);
-        /* Texto blanco por defecto */
-        padding: 10px;
-    }
+  
 
 
     /* Imagen de la moto */
     .moto-hero {
-        width: 100%;
-        /* Full width en mobile */
-        max-width: 400px;
-        /* Limitar el tamaño máximo */
+       order: 1;
+        width: 80%;
+        max-width: 600px;
+        margin-right: 10px; /* Separación entre la moto y el texto */
+   
         margin: 0 auto;
         /* Centrar en pantallas pequeñas */
         opacity: 0;
@@ -800,15 +800,11 @@ iframe {
 
     /* Texto sobre la moto */
     .carousel-text {
-        position: relative;
-        /* Cambiado a relativo para mobile */
-        top: auto;
-        left: auto;
-        text-align: center;
-        /* Centrado en mobile */
-        margin-top: 20px;
-        color: var(--blanco);
-
+        order:3;
+        max-width: 40%;
+        text-align: right; /* Alineación a la izquierda para landscape */
+        padding-right: 40px;
+        
     }
 
     .animated-text {
@@ -838,7 +834,6 @@ iframe {
         opacity: 1;
         transform: translateY(0);
     }
-
     /*-------------------------------------gama motos--------------------------------*/
     .slider-item {
         flex-direction: row;
@@ -898,20 +893,34 @@ iframe {
 
     /*-----------------------seccion eventos----------------------*/
      /*-----------------------seccion eventos----------------------*/
-    /* Estilos para las imágenes */
-    .eventos-container {
-        flex-direction: row; /* Alinear imágenes horizontalmente en pantallas grandes */
-     }
-
-     .eventos-item {
-        width: 38%; /* Tres ítems por fila en desktop */
-        height: 400px; /* Altura específica para video en desktop */
+     .eventos-container {
+        display: flex;
+        flex-direction: row; /* Alinear en fila en pantallas grandes */
+        justify-content: space-between; /* Espacio uniforme entre elementos */
+        gap: 2%; /* Espaciado entre cada elemento */
     }
+    
+    .eventos-item,
+    .video-container {
+        width: 32%; /* Ajustar a tres elementos con espacio entre ellos */
+        height: 600px; /* Altura uniforme */
+        position: relative;
+        overflow: hidden; /* Oculta el contenido que desborda */
+    }
+    
+    .eventos-item img,
     .eventos-video {
-        width: 100%;
-        height: 400px; /* Altura específica para video en desktop */
+        width: 100%; /* Ancho completo del contenedor */
+        height: 100%; /* Altura completa del contenedor */
+        object-fit: cover; /* Asegura que las imágenes y el video se ajusten sin distorsión */
     }
-     
+    
+    .section-eventos-title {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    
+  
 
     /*------------------Seccion form y contacto---------------------------------------------------------------------------*/
     .contact-section {
@@ -1133,11 +1142,8 @@ iframe {
 /* ----------------------------------------------------------- Estilos Desktop --------------------------------------------------------- */
 @media (min-width: 901px) {
     /*-------------------------------------nav------------------------------*/
-
     .navbar {
         height: 100px;
-
-
     }
 
     #logo {
@@ -1145,7 +1151,6 @@ iframe {
         /* Aumenta el tamaño del logo */
         height: auto;
         /* Mantiene las proporciones */
-
     }
 
     .navbar .nav-link {
@@ -1167,20 +1172,24 @@ iframe {
         display: inline-block;
         cursor: pointer;
     }
-
-
-
-
-    /*--------------------------seccion hero------------------------------------------*/
+/*--------------------------seccion hero------------------------------------------*/
     /* Opción 2: Fondo con imagen y capa semitransparente */
+    
+    
     .carousel-hero {
-        background-image: url('../img/hero/fondo-hero.jpeg');
-        /* Reemplaza con tu imagen */
         background-size: cover;
-        background-position: center;
+        background-position: bottom;
         background-repeat: no-repeat;
+        height: 90vh;
     }
 
+    .carousel-hero .fondo-himalayan{
+        background-image: url('../img/hero/fondo-himalayan.jpg');
+    }
+
+    .carousel-hero .fondo-himalayan{
+        background-image: url('../img/hero/fondo-shotgun.jpg');
+    }
     /* Capa semitransparente sobre la imagen */
     .carousel-hero::before {
         content: "";
@@ -1201,15 +1210,23 @@ iframe {
         color: var(--blanco);
         /* Asegura que el texto siga siendo blanco */
     }
-
+    .carousel-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px; /* Asegura un padding lateral para ajustar contenido */
+    }
     /* Imagen de la moto en tablet/desktop */
     .moto-hero {
-        width: 75%;
+        width: 70%;
+        padding-right: 100px;
         /* Ajustamos para que ocupe más espacio en desktop */
         max-width: none;
         object-fit: cover;
         /* Para que la imagen no se deforme */
         z-index: 2;
+   
+
     }
 
     .logo-hero{
@@ -1289,9 +1306,10 @@ iframe {
         /* Texto blanco siempre */
         border-color: var(--rojo-oscuro);
         /* Cambia el borde a rojo oscuro al hacer hover */
-        transform: scale(1.05);
+        transform: scale(1.1);
         /* Efecto de escalado al pasar el ratón */
     }
+
 
     /*---------------------------------seccion modelos motos-----------------------------------------*/
     /* Estilos para los items del carrusel en desktop */
@@ -1347,28 +1365,33 @@ iframe {
         /* Ajusta la posición si es necesario */
     }
     /*-----------------------seccion eventos--------------------------*/
+   
     .eventos-container {
-        flex-direction: row; /* Alinear imágenes horizontalmente en pantallas grandes */
-     }
-     .eventos-container {
-        flex-direction: row; /* Alinear imágenes horizontalmente en pantallas grandes */
-     }
-     .eventos-item {
-        width: 38%; /* Tres ítems por fila en desktop */
-        height: 600px; /* Altura específica para video en desktop */
-    }
-    .eventos-video {
-        width: 100%;
-        height: 600px; /* Altura específica para video en desktop */
+        display: flex;
+        flex-direction: row; /* Alinear en fila en pantallas grandes */
+        justify-content: space-between; /* Espacio uniforme entre elementos */
+        gap: 2%; /* Espaciado entre cada elemento */
     }
     
-
-     .section-eventos-title{
-         font-weight: 900;
-         font-size: 2rem;
-     }
-
-
+    .eventos-item,
+    .video-container {
+        width: 32%; /* Ajustar a tres elementos con espacio entre ellos */
+        height: 600px; /* Altura uniforme */
+        position: relative;
+        overflow: hidden; /* Oculta el contenido que desborda */
+    }
+    
+    .eventos-item img,
+    .eventos-video {
+        width: 100%; /* Ancho completo del contenedor */
+        height: 100%; /* Altura completa del contenedor */
+        object-fit: cover; /* Asegura que las imágenes y el video se ajusten sin distorsión */
+    }
+    
+    .section-eventos-title {
+        font-weight: 700;
+        font-size: 2rem;
+    }
 
     /*----------------------------seccion form y contacto----------------------------*/
     .form-container h4 {

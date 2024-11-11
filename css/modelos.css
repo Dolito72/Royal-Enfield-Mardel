@@ -1,3 +1,8 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --font: 'Lato', sans-serif;
 
@@ -23,28 +28,27 @@
 
     --rojo-intenso: #D32F2F;
     --amarillo-intenso: #FFC107;
-    --negro-2: #212121;
+    --negro-2:#212121 ;
     --gris-medio: #9E9E9E;
     --negro: #121111;
-
+    
 }
 
-p {
+
+
+
+p{
     color: var(--blanco);
-    line-height: 1.4;
-    /* Ajusta el interlineado */
+    line-height: 1.4; /* Ajusta el interlineado */
     font-weight: 400;
     font-size: 1.2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    /* Sombra del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra del texto */
 }
-
 
 /* Estilos base para el header ------------------(Mobile First) */
 /* Estilos temporales para el estado "loading" */
 #header2.loading {
-    background-color: #f0f0f0;
-    /* Fondo gris inicial */
+    background-color: #f0f0f0; /* Fondo gris inicial */
 }
 
 /* Estilo para logo oculto al cargar */
@@ -53,145 +57,109 @@ p {
 }
 
 /* shotgun*/
-#header2.model1 {
+#header2.model1{
     background-size: cover;
     background-position: center 40%;
     width: 100%;
     height: 50vh;
     display: flex;
-    align-items: center;
-    /* Centrar verticalmente */
-    justify-content: flex-start;
-    /* Alinear el contenido a la izquierda */
-    padding-left: 20px;
-    /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-    padding-top: 10px;
-    /* Ajusta la posición hacia abajo en mobile */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-start; /* Alinear el contenido a la izquierda */
+    padding-left: 20px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+    padding-top: 10px; /* Ajusta la posición hacia abajo en mobile */
 }
-
 /* continental*/
-#header2.model2 {
+#header2.model2{
     background-size: cover;
     background-position: center bottom;
     width: 100%;
     height: 60vh;
 }
-
 /*super meteor*/
-#header2.model3 {
+#header2.model3{
     background-size: cover;
     background-position: center right;
     width: 100%;
     height: 50vh;
     display: flex;
-    align-items: center;
-    /* Centrar verticalmente */
-    justify-content: flex-start;
-    /* Alinear el contenido a la izquierda */
-    padding-left: 20px;
-    /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-    padding-top: 10px;
-    /* Ajusta la posición hacia abajo en mobile */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-start; /* Alinear el contenido a la izquierda */
+    padding-left: 20px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+    padding-top: 10px; /* Ajusta la posición hacia abajo en mobile */
 }
-
 /*interceptor*/
-#header2.model4 {
+#header2.model4{
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 50vh;
     display: flex;
-    align-items: center;
-    /* Centrar verticalmente */
-    justify-content: flex-start;
-    /* Alinear el contenido a la izquierda */
-    padding-left: 100px;
-    /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-    padding-bottom: 50px;
-    /* Ajusta la posición hacia abajo en mobile */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-start; /* Alinear el contenido a la izquierda */
+    padding-left: 100px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+    padding-bottom: 50px; /* Ajusta la posición hacia abajo en mobile */
 }
 
 /*himalayan*/
-#header2.model5 {
+#header2.model5{
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 50vh;
     display: flex;
-    align-items: center;
-    /* Centrar verticalmente */
-    justify-content: flex-start;
-    /* Alinear el contenido a la izquierda */
-    padding-left: 10px;
-    /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-    padding-bottom: 100px;
-    /* Ajusta la posición hacia abajo en mobile */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-start; /* Alinear el contenido a la izquierda */
+    padding-left: 10px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+    padding-bottom: 100px; /* Ajusta la posición hacia abajo en mobile */
 }
 
 /*classic*/
-#header2.model7 {
+#header2.model7{
     background-size: cover;
     background-position: 80% center;
     width: 100%;
     height: 50vh;
     display: flex;
-    align-items: center;
-    /* Centrar verticalmente */
-    justify-content: flex-start;
-    /* Alinear el contenido a la izquierda */
-    padding-left: 10px;
-    /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-    padding-bottom: 10px;
-    /* Ajusta la posición hacia abajo en mobile */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-start; /* Alinear el contenido a la izquierda */
+    padding-left: 10px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+    padding-bottom: 10px; /* Ajusta la posición hacia abajo en mobile */
 }
 
 /*meteor*/
-#header2.model8 {
+#header2.model8{
     background-size: cover;
     background-position: 75% center;
     width: 100%;
     height: 50vh;
     display: flex;
-    align-items: center;
-    /* Centrar verticalmente */
-    justify-content: flex-start;
-    /* Alinear el contenido a la izquierda */
-    padding-left: 10px;
-    /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-    padding-bottom: 10px;
-    /* Ajusta la posición hacia abajo en mobile */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-start; /* Alinear el contenido a la izquierda */
+    padding-left: 10px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+    padding-bottom: 10px; /* Ajusta la posición hacia abajo en mobile */
 }
 
 /*hntr*/
-#header2.model9 {
+#header2.model9{
     background-size: cover;
     background-position: right bottom;
     width: 100%;
     height: 50vh;
     display: flex;
-    align-items: center;
-    /* Centrar verticalmente */
-    justify-content: flex-start;
-    /* Alinear el contenido a la izquierda */
-    padding-left: 10px;
-    /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-    padding-bottom: 60px;
-    /* Ajusta la posición hacia abajo en mobile */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-start; /* Alinear el contenido a la izquierda */
+    padding-left: 10px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+    padding-bottom: 60px; /* Ajusta la posición hacia abajo en mobile */
 }
 
 
 .header2-content {
     z-index: 2;
-    display: flex;
-    /* Usa flexbox para organizar el logo y la descripción */
-    flex-direction: column;
-    /* Organiza en columna */
-    justify-content: center;
-    /* Centra verticalmente */
-    align-items: flex-start;
-    /* Alinea a la izquierda */
-    text-align: left;
-    /* Asegura que el texto esté alineado a la izquierda */
+    display: flex; /* Usa flexbox para organizar el logo y la descripción */
+    flex-direction: column; /* Organiza en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: flex-start; /* Alinea a la izquierda */
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
     padding: 20px;
 
 }
@@ -205,11 +173,10 @@ p {
 #description-header2 {
     color: white;
     font-size: 16px;
+    font-weight: bold;
     display: none;
-    margin-top: 10px;
-    /* Añadir un espacio entre el logo y la descripción */
+    margin-top: 10px; /* Añadir un espacio entre el logo y la descripción */
 }
-
 /* Landscape para dispositivos con ancho mayor a 480px y en modo horizontal */
 @media only screen and (max-width: 900px) and (orientation: landscape) {
     #header2.model1 {
@@ -217,221 +184,185 @@ p {
         justify-content: flex-start;
         height: 70vh;
 
-    }
+}  #header2.model2 {
+    background-position: center 70%;
+    justify-content: flex-start;
+    height: 70vh;
 
-    #header2.model2 {
-        background-position: center 70%;
-        justify-content: flex-start;
-        height: 70vh;
+}
+#header2.model3{
+    background-position: center 80%;
+    justify-content: flex-start;
+    height: 90vh; /* Aumentar la altura si es necesario */
+    background-size: cover; /* Asegúrate de que la imagen de fondo cubra el área */
+    padding-top: 20px;
+}
+/*interceptor*/
+#header2.model4{
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-start; /* Alinear el contenido a la izquierda */
+    padding-left: 20px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+    padding-top: 10px; /* Ajusta la posición hacia abajo en mobile */
+    padding-bottom: 10px;
+}
+/*himalayan*/
+#header2.model5{
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 90vh;
+    padding-left: 10px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+    padding-bottom: 10px; /* Ajusta la posición hacia abajo en mobile */
+}
 
-    }
+/*classic*/
+#header2.model7{
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    height: 90vh;
+    padding-bottom: 10px; /* Ajusta la posición hacia abajo en mobile */
+}
+/*meteor*/
+#header2.model8{
+   
+    background-position: 90% center;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-start; /* Alinear el contenido a la izquierda */
+    padding-left: 10px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+    padding-bottom: 10px; /* Ajusta la posición hacia abajo en mobile */
+}
 
-    #header2.model3 {
-        background-position: center 80%;
-        justify-content: flex-start;
-        height: 90vh;
-        /* Aumentar la altura si es necesario */
-        background-size: cover;
-        /* Asegúrate de que la imagen de fondo cubra el área */
-        padding-top: 20px;
-    }
+/*hntr*/
+#header2.model9{
+ 
+    background-position: center;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-start; /* Alinear el contenido a la izquierda */
+    padding-left: 10px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+    padding-bottom: 10px; /* Ajusta la posición hacia abajo en mobile */
+}
 
-    /*interceptor*/
-    #header2.model4 {
-        background-size: cover;
-        background-position: top;
-        width: 100%;
-        height: 80vh;
-        display: flex;
-        align-items: center;
-        /* Centrar verticalmente */
-        justify-content: flex-start;
-        /* Alinear el contenido a la izquierda */
-        padding-left: 20px;
-        /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-        padding-top: 10px;
-        /* Ajusta la posición hacia abajo en mobile */
-        padding-bottom: 10px;
-    }
-
-    /*himalayan*/
-    #header2.model5 {
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 90vh;
-        padding-left: 10px;
-        /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-        padding-bottom: 10px;
-        /* Ajusta la posición hacia abajo en mobile */
-    }
-
-    /*classic*/
-    #header2.model7 {
-        background-size: cover;
-        background-position: right;
-        width: 100%;
-        height: 90vh;
-        padding-bottom: 10px;
-        /* Ajusta la posición hacia abajo en mobile */
-    }
-
-    /*meteor*/
-    #header2.model8 {
-
-        background-position: 90% center;
-        width: 100%;
-        height: 90vh;
-        display: flex;
-        align-items: center;
-        /* Centrar verticalmente */
-        justify-content: flex-start;
-        /* Alinear el contenido a la izquierda */
-        padding-left: 10px;
-        /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-        padding-bottom: 10px;
-        /* Ajusta la posición hacia abajo en mobile */
-    }
-
-    /*hntr*/
-    #header2.model9 {
-
-        background-position: center;
-        width: 100%;
-        height: 90vh;
-        display: flex;
-        align-items: center;
-        /* Centrar verticalmente */
-        justify-content: flex-start;
-        /* Alinear el contenido a la izquierda */
-        padding-left: 10px;
-        /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-        padding-bottom: 10px;
-        /* Ajusta la posición hacia abajo en mobile */
-    }
-
-    .header2-content {
-        display: flex;
-        flex-direction: column;
-        width: 30%;
-        text-align: left;
-
-    }
+.header2-content {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: left;
+   
+}
 
 
-    #description-header2 {
-        display: block;
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    #logo-header2 {
-        max-width: 150px;
-        height: auto;
-        padding-bottom: 10px;
-    }
+#description-header2 {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#logo-header2 {
+    max-width: 150px;
+    height: auto;
+    padding-bottom: 10px;
+}
 
 }
 
 /* Estilos para pantallas más grandes */
 @media (min-width: 901px) {
-
     /*shotgun*/
     #header2.model1 {
         background-position: center bottom;
         justify-content: flex-start;
-        padding-left: 50px;
-        /* Ajusta el padding en pantallas grandes */
+        padding-left: 50px; /* Ajusta el padding en pantallas grandes */
         height: 80vh;
     }
 
-    /*continental*/
-    #header2.model2 {
-        background-position: center bottom;
+      /*continental*/
+      #header2.model2 {
+        background-position: center bottom ;
         justify-content: flex-start;
-        padding-left: 50px;
-        /* Ajusta el padding en pantallas grandes */
+        padding-left: 50px; /* Ajusta el padding en pantallas grandes */
         height: 100vh;
     }
 
-    #header2.model3 {
+    #header2.model3{
         background-position: center bottom;
         height: 100vh;
     }
-
-    #header2.model4 {
-        background-position: right;
+    #header2.model4{
+        background-position:  right;
         justify-content: flex-start;
         height: 100vh;
-        padding-top: 50px;
+        padding-top: 50px; 
     }
 
-    #header2.model5 {
+    #header2.model5{
         background-size: cover;
         background-position: bottom;
         width: 100%;
         height: 100vh;
-        padding-left: 10px;
-        /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-        padding-bottom: 10px;
-        /* Ajusta la posición hacia abajo en mobile */
+        padding-left: 10px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+        padding-bottom: 10px; /* Ajusta la posición hacia abajo en mobile */
     }
 
     /*classic*/
-    #header2.model7 {
-        background-size: cover;
-        background-position: right;
-        width: 100%;
-        height: 100vh;
-        padding-bottom: 10px;
-        /* Ajusta la posición hacia abajo en mobile */
-    }
+#header2.model7{
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 10px; /* Ajusta la posición hacia abajo en mobile */
+}
 
-    /*meteor*/
-    #header2.model8 {
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 100vh;
-        padding-bottom: 10px;
-        /* Ajusta la posición hacia abajo en mobile */
-    }
+ /*meteor*/
+ #header2.model8{
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 10px; /* Ajusta la posición hacia abajo en mobile */
+}
 
-    /*hntr*/
-    #header2.model9 {
-        background-position: center;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        /* Centrar verticalmente */
-        justify-content: flex-start;
-        /* Alinear el contenido a la izquierda */
-        padding-left: 10px;
-        /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
-        padding-bottom: 10px;
-        /* Ajusta la posición hacia abajo en mobile */
-    }
+/*hntr*/
+#header2.model9{
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-start; /* Alinear el contenido a la izquierda */
+    padding-left: 10px; /* Añadir un pequeño padding para que el contenido no quede pegado a la izquierda */
+    padding-bottom: 10px; /* Ajusta la posición hacia abajo en mobile */
+}
 
-    .header2-content {
+.header2-content {
         width: 30%;
         text-align: left;
-        align-items: flex-start;
-        /* Mantén el contenido alineado a la izquierda */
+        align-items: flex-start; /* Mantén el contenido alineado a la izquierda */
     }
 
     #logo-header2 {
-        max-width: 300px;
-        /* Tamaño del logo en pantallas grandes */
+        max-width: 300px; /* Tamaño del logo en pantallas grandes */
         padding-bottom: 5px;
     }
 
     #description-header2 {
         display: block;
-        font-size: 25px;
+        font-size: 20px;
         margin-top: 10px;
     }
 }
+
+
 
 /* ---------------Estilos generales seccion 2 ficha tecnica---------- */
 /* Estilos base para mobile-first */
@@ -439,12 +370,12 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+   
     padding: 10px;
     background-color: var(--negro-2);
-    /*  background-color: #424949 ;  Fondo gris */
-    /*   background-color: var(--gris-medio);*/
-    /* background-color:#6c757d ; */
+  /*  background-color: #424949 ;  Fondo gris */
+ /*   background-color: var(--gris-medio);*/
+   /* background-color:#6c757d ; */
 }
 
 .div-imagen-ficha,
@@ -454,196 +385,279 @@ p {
     margin: 10px 0;
 }
 
-#texto-ficha {
+#texto-ficha{
     text-align: justify;
     padding: 15px;
+    font-size: 1.2rem;
 }
-
 #imagen-ficha {
-    width: 100%;
-    /* Ajusta según el tamaño que necesites para mobile */
-    max-width: 420px;
-    /* Tamaño máximo para no exceder en pantallas más grandes */
-
+    width: 100%; /* Ajusta según el tamaño que necesites para mobile */
+    max-width: 420px; /* Tamaño máximo para no exceder en pantallas más grandes */
+    height: auto;
+    object-fit: cover;   
 }
 
 .btn-ficha {
     margin-top: 15px;
 }
 
-
-/*--------------------------seccion 4 moto gira---------------------*/
-.section-gira {
+/*--------------------------seccion 4 detalle moto ---------------------*/
+.moto-tooltip-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    margin: 0;
+    margin-top: 2px;
+    padding: 0;
     background-color: var(--blanco);
+    display: flex; /* Agregado */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+   
+}
+
+.logo-fondo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajusta el tamaño del logo al 90% del contenedor */
+    opacity: 0.1; /* Controla la transparencia del logo */
+    z-index: 1;
+    max-width: 100%; /* Asegura que el logo no supere el ancho del contenedor */
+    max-height: 100%; 
+    object-fit: contain;
+}
+
+.moto-imagen {
+  position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+
+  
+}
+
+.punto-interactivo {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--rojo);
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: glow 1.5s infinite alternate; /* Efecto de brillo intermitente */
+    z-index: 3;
+}
+
+.punto-interactivo::before {
+    content: "+";
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes glow {
+  
+
+        0% { 
+           
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 0, 0, 0.3); 
+        }
+        50% { 
+            /* Aumenta el tamaño para simular la explosión */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 0, 0, 0.6); 
+        }
+        100% { 
+         
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 0, 0, 0.3); 
+        }
+    }
+
+
+
+
+.tooltip {
+    position: absolute;
+    bottom: 35px; /* Ajusta según el tamaño del punto */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    white-space: pre-line;
+    text-align: center;
+    min-width: 250px; /* Ajusta el tamaño mínimo de la tooltip */
+    max-width: calc(100% - 18px); /* Evita que el tooltip se corte en dispositivos móviles */
+ 
+}
+
+.punto-interactivo:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+ 
+}
+
+
+
+
+/*--------------------------seccion 5 moto gira---------------------*/
+.section-gira{
+    background-color:  var(--blanco);
+    margin: 0;
+    padding: 0;
+  
 }
 
 /* Diseño por defecto para mobile-first (column layout) */
 .moto-giratoria {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;;
     align-items: center;
     justify-content: center;
-    margin: 20px 0;
-
+    margin: 0 ;
+  
 }
-
 .moto-imagen-container,
 .moto-detalle-container {
     flex: unset;
     width: 100%;
-    padding: 20px;
-    /* Puedes ajustar el padding para mejor distribución en mobile */
-    text-align: center;
-    /* Centrar el texto y la imagen en mobile */
+    padding: 20px; /* Puedes ajustar el padding para mejor distribución en mobile */
+    text-align: center; /* Centrar el texto y la imagen en mobile */
 
 }
 
-#moto-nombre {
+#moto-nombre{
     font-weight: 700;
+    display: none;
 }
-
-#moto-descripcion {
+ #moto-descripcion{
     text-align: justify;
     color: var(--negro-2);
     font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(198, 198, 198, 0.6);
-    /* Sombra del texto */
+    text-shadow: 2px 2px 4px rgba(198, 198, 198, 0.6); /* Sombra del texto */
     padding-top: 15px;
+    display: none;
 }
 
-#logo-gira {
+#logo-gira{
     width: 250px;
-    padding-left: 40px;
+    padding-left: 0;
+    margin-top: 10px;
 }
 
 
 .moto-imagen-container {
-
+  
     position: relative;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 .moto-detalle-container {
     color: var(--negro-2);
     display: flex;
-    flex-direction: column;
-    /* Para alinear el logo y la descripción en columna */
-    justify-content: center;
-    /* Centrar verticalmente */
-    align-items: center;
-    /* Centrar horizontalmente */
-    text-align: center;
-    /* Para centrar el texto también */
+    flex-direction: column; /* Para alinear el logo y la descripción en columna */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center; /* Para centrar el texto también */
 
-
+    
 }
-
-#moto-nombre {
+#moto-nombre{
     text-align: center;
-    font-weight: 600;
+    font-weight: 900;
     padding-top: 20px;
 }
 
 
-#imagen-moto-giratoria {
+#imagen-moto-giratoria{
     width: 100%;
     mask-image: radial-gradient(circle, black 70%, transparent 100%);
-    max-width: 700px;
-    /* Tamaño máximo para la imagen de la moto */
-
+    max-width: 700px; /* Tamaño máximo para la imagen de la moto */
+   
 }
-
 .flecha-animada-container {
     position: absolute;
-    bottom: -10px;
-    /* Ajusta la posición de la flecha según sea necesario */
+   
+    bottom: -10px; /* Ajusta la posición de la flecha según sea necesario */
     left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* animation: mover-flecha 2s infinite alternate;*/
+ 
 }
 
-.texto-flecha {
-    font-size: 14px;
-    color: var(--gris-medio);
-    margin-right: 8px;
-}
 
-.flecha-animada {
-    stroke: var(--gris-medio);
-    /* Cambia el color de la flecha si es necesario */
-}
 
 /* Estilos para el contenedor de los tanques de colores */
+/* Contenedor de la sección de tanques */
+.tanques {
+    text-align: center; /* Centra el título */
+    margin-bottom: 20px;
+}
+
+
+#titulo-tanque{
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 1.6rem;
+}
 
 #color-container {
     display: flex;
-    flex-wrap: wrap;
-    /* Permitir que los elementos se envuelvan a una nueva fila si no caben */
-    justify-content: center;
-    /* Centrar los tanques horizontalmente */
-    align-items: center;
-    /* Centrar verticalmente si es necesario */
-    gap: 15px;
-    /* Espacio entre los tanques */
-    /* Espacio superior e inferior alrededor del contenedor */
+    flex-wrap: wrap; /* Permitir que los elementos pasen a una nueva fila si no caben */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    gap: 15px; /* Espacio entre las opciones en mobile */
     color: var(--negro-2);
-}
-
-.titulo-tanques {
-    display: flex;
-    justify-content: center;
-    /* Centrar los tanques horizontalmente */
-    align-items: center;
-    /* Centrar verticalmente si es necesario */
-    color: var(--negro-2);
-
-
-}
-
-#titulo-tanques {
-    font-weight: 800;
 }
 
 .color-option {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2px;
+    text-align: center;
+    width: 45%; /* 2 por fila en mobile */
+    margin-bottom: 10px;
+    padding: 5px;
 }
 
 .color-nombre {
-    margin-top: 0px;
-    padding-bottom: 20px;
-    font-size: 1.1em;
-    text-align: center;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    font-size: 0.6 rem;
+    font-weight: 600;
+    word-wrap: break-word; /* Permite que los nombres largos pasen a la siguiente línea */
+    white-space: normal; /* Rompe la línea si es necesario */
 }
 
 .tanque-color {
-    width: 150px;
-    /* Ajusta el tamaño de los tanques según sea necesario */
+    width: 90%;
     height: auto;
-    /* Mantiene la proporción de la imagen */
+    object-fit: cover;
     cursor: pointer;
-    /* Muestra un puntero al pasar sobre la imagen */
-    padding-bottom: 5px;
     transition: transform 0.3s ease;
-    /* Animación suave al pasar el mouse */
+    padding-bottom: 10px;
 }
 
 .tanque-color:hover {
-    transform: scale(1.2);
-    /* Aumenta el tamaño del tanque al pasar el mouse */
+    transform: scale(1.1); /* Efecto hover */
 }
+
 
 /*----------------------Seccion 5 formulario contacto -------------------*/
 .moto-detail-section .spec-item {
     margin-bottom: 20px;
     color: var(--blanco);
     font-weight: 500;
-    font-size: 1rem;
+    font-size:1rem ;
 }
 
 .moto-detail-section .spec-item i {
@@ -661,40 +675,38 @@ p {
     justify-content: center;
     align-items: center;
     padding: 5px;
-
+ 
 }
+#imagen-form{
+    height: auto;          /* Mantener la proporción de la imagen */
+object-fit: cover;
+}
+ 
 
-.form-container {
+.form-container{
     background-color: var(--rojo-intenso);
-
-
+   
+   
 }
 
 
-.moto-image-container img {
-    max-width: 100%;
-    /* Ajusta el tamaño de la imagen según sea necesario */
-    height: 330px;
-}
+
+
 
 /* Espaciado entre los campos del formulario */
-.moto-detail-section .form-control,
-.moto-detail-section .form-select,
+.moto-detail-section .form-control, 
+.moto-detail-section .form-select, 
 .moto-detail-section textarea {
     padding-top: 20px;
-    padding: 5px;
-    /* Mantener un padding compacto */
-    margin-bottom: 10px;
-    /* Añadir un margen inferior para espaciar los campos */
-    font-size: 0.9rem;
-    /* Tamaño de fuente más pequeño para reducir el tamaño del campo */
+    padding: 10px; /* Mantener un padding compacto */
+    margin-bottom: 10px; /* Añadir un margen inferior para espaciar los campos */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño para reducir el tamaño del campo */
 }
 
 
 .moto-detail-section .form-container button {
-    margin-top: 20px;
-    /* Reducir el margen superior del botón */
-
+    margin-top: 20px; /* Reducir el margen superior del botón */
+    
 }
 
 /* ----------------Estilos generales para la galería----------------- */
@@ -704,57 +716,44 @@ p {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 20px;
-    font-weight: 500;
-    font-size: 1.8rem;
-    /* Ajusta el tamaño del título */
+    font-size: 1.8rem; /* Ajusta el tamaño del título */
 }
 
 /* Estilos base para la galería */
 .wallpaper-grid {
     display: grid;
-    gap: 10px;
-    /* Espacio entre las imágenes */
-    grid-template-columns: 1fr;
-    /* Una sola columna por defecto en mobile */
-    justify-items: center;
-    /* Centrar las imágenes dentro de sus celdas */
+    gap: 8px; /* Espacio entre las imágenes */
+    grid-template-columns: 1fr; /* Una sola columna por defecto en mobile */
+    justify-items: center; /* Centrar las imágenes dentro de sus celdas */
+    padding: 0 20px; /* Añade espacio en los lados izquierdo y derecho */
 }
 
 .wallpaper-img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    /* Sombra para dar un efecto elegante */
-    cursor: pointer;
-    /* Indicar que se puede hacer clic */
-    transition: transform 0.3s;
-    /* Animación suave al pasar el ratón */
-    max-width: 400px;
-    /* Define un ancho máximo para evitar que sea demasiado grande */
-    object-fit: cover;
-    /* Asegura que la imagen mantenga su proporción */
+    padding-left: 3px;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar un efecto elegante */
+    cursor: pointer; /* Indicar que se puede hacer clic */
+    transition: transform 0.3s; /* Animación suave al pasar el ratón */
+    max-width: 400px; /* Define un ancho máximo para evitar que sea demasiado grande */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
 }
 
 .wallpaper-img:hover {
-    transform: scale(1.05);
-    /* Efecto de zoom al pasar el ratón */
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
 }
 
 /* Estilos para el modal de la imagen */
 #image-modal {
-    display: none;
-    /* Oculto por defecto */
+    display: none; /* Oculto por defecto */
     position: fixed;
-    z-index: 1000;
-    /* Asegúrate de que esté por encima de todo */
+    z-index: 1000; /* Asegúrate de que esté por encima de todo */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Fondo oscuro transparente */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro transparente */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -771,24 +770,12 @@ p {
     top: 220px;
     right: 20px;
     font-size: 36px;
-    color: white;
-    /* Haz que la cruz sea blanca para que contraste con el fondo oscuro */
-    cursor: pointer;
-    /* Muestra el cursor de mano al pasar sobre la cruz */
-    z-index: 1001;
-    /* Asegúrate de que esté por encima del modal */
+    color: white; /* Haz que la cruz sea blanca para que contraste con el fondo oscuro */
+    cursor: pointer; /* Muestra el cursor de mano al pasar sobre la cruz */
+    z-index: 1001; /* Asegúrate de que esté por encima del modal */
 }
 
 
-
-
-/* Estilos para pantallas landscape (horizontal) */
-@media (min-width: 768px) {
-    .wallpaper-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* Dos columnas en landscape */
-    }
-}
 
 
 
@@ -797,41 +784,174 @@ p {
 /* Landscape para dispositivos con ancho mayor a 480px y en modo horizontal */
 @media only screen and (max-width: 900px) and (orientation: landscape) {
 
-    /*--------------------seccion 2------------------------*/
-    .descripcion-ficha {
+
+
+      /*--------------------seccion 2------------------------*/
+      .descripcion-ficha {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
     #texto-ficha {
-        padding-top: 30px;
-        margin-bottom: 2px;
-        /* Espacio entre el texto y el botón */
-        font-size: 0.9 rem;
+        padding-top: 20px;
+        margin-bottom: 2px; /* Espacio entre el texto y el botón */
+        font-size: 1.2rem;
     }
 
     #imagen-ficha {
+        width: 100%; /* Ajusta según el tamaño que necesites para mobile */
+      /* Tamaño máximo para no exceder en pantallas más grandes */
+        height:300px ;
+    }
+/*----SECCION 4 TOOLTIP--------------------------------------------*/
+    .moto-tooltip-container {
+        position: relative;
         width: 100%;
-        /* Ajusta según el tamaño que necesites para mobile */
-        /* Tamaño máximo para no exceder en pantallas más grandes */
         height: 300px;
     }
+    .moto-imagen{
+        padding-top: 20px;
+        width: 80%;
+    }
+
+    .tooltip {
+        min-width: 400px;
+    }
+
+    /*---------------SECCION 5-------------------------*/
+    #titulo-tanque{
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    #color-container {
+        flex-direction: row; /* En desktop, los tanques vuelven a estar en fila */
+       gap: 15px;
+    }
+
+    .color-option {
+        width: 15%; /* Permitir 4 elementos por fila en desktop */
+
+    }
+    
+   
+    
+    .color-nombre {
+        margin-top: 5px;
+        padding-bottom: 10px;
+        font-size: 1.1rem; /* Tamaño de fuente más grande para pantallas grandes */
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .tanque-color {
+        width: 100%; /* Ajusta el tamaño para ocupar más espacio en la fila */
+        height: auto;
+        object-fit: cover;
+        cursor: pointer;
+        padding-bottom: 10px;
+        transition: transform 0.3s ease;
+    }
+
+/*--------------------------SECCION FORM ------------------------*/
+
+
+
+    /* Imagen: Ocupa el 100% de la altura del contenedor */
+    .moto-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 10px;
+    }
+
+    #imagen-form {
+        width: 110%;             /* Ocupar todo el ancho del contenedor de imagen */
+        height: 110%;            /* Igualar la altura al formulario */
+        object-fit: cover;       /* Ajustar la imagen sin distorsión */
+        border-radius: 2px;      /* Opcional: esquinas redondeadas */
+    }
+
+    /* Formulario: ocupando el 100% del alto disponible */
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 95%;            /* Ajusta la altura al contenedor principal */
+        padding: 20px;  
+        padding-right: 20px;         /* Espaciado interno del formulario */
+        background-color: var(--rojo-intenso);
+        border-radius: 2px;      /* Opcional: esquinas redondeadas */
+    }
+
+    /* Ajustes para el botón en pantallas grandes */
+    .form-container button {
+        width: 50%;              /* Ancho del botón en desktop */
+        align-self: center;
+    }
+
+
+
 
     /*--------------------wallpapers--------------------------*/
-    #close-modal {
+    .wallpaper-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en landscape */
+    }
 
+    .wallpaper-img {
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho de la celda */
+        height: 340px; /* Establece una altura fija para todas las imágenes */
+        object-fit: cover; /* Asegura que la imagen cubra el área disponible sin distorsionarse */
+        border-radius: 5px; /* (opcional) bordes redondeados para las imágenes */
+    }
+
+    #close-modal {
         top: 20px;
         right: 210px;
         font-size: 36px;
     }
-
+    
 
 }
 
 /* ----------------------------------------------------------- Estilos Desktop --------------------------------------------------------- */
 @media (min-width: 901px) {
+    #header {
+        display: flex;
+        flex-direction: row; /* Los elementos en fila */
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        height: 100vh;
+    }
 
+    .header-content {
+        padding-top: 10px;
+        padding-left: 20px;
+        flex: 1;
+        max-width: 40%;
+        display: flex;
+        flex-direction: column; /* Para alinear el logo y la descripción en columna */
+        justify-content: center; /* Centrar verticalmente */
+        align-items: center; /* Centrar horizontalmente */
+        text-align: center; /* Para centrar el texto también */
+    }
+
+    #logo-header {
+        padding-left: 30px;
+        width: 200px;
+    }
+
+    #descripcion-header {
+        font-size: 1.2em;  
+    }
+
+    #imagen-header {
+        flex: 1;
+        width: 100%;
+        max-width: 80%;
+    }
     /*--------------------seccion 2------------------------*/
     .descripcion-ficha {
         flex-direction: row;
@@ -843,10 +963,9 @@ p {
         width: 50%;
         text-align: center;
     }
-
-    #imagen-ficha {
+    #imagen-ficha{
         width: 100%;
-        max-width: 700px;
+        max-width: 700px; 
     }
 
     .div-descripcion-ficha {
@@ -857,158 +976,219 @@ p {
         align-items: flex-start;
     }
 
-    #texto-ficha {
-        margin-bottom: 15px;
-        /* Espacio entre el texto y el botón */
-        font-size: 1.4 rem;
-    }
 
+#texto-ficha{
+    text-align: justify;
+    padding: 15px;
+    font-size: 1.6rem;
+}
     .btn-ficha {
-        align-self: center;
-        /* Mantiene el botón alineado a la izquierda */
+        align-self: center; /* Mantiene el botón alineado a la izquierda */
     }
 
-    /*----------------------------------SECCION 4 MOTO GIRA-------------------------*/
+/*----------------------------------SECCION 4 detalle-------------------------*/
+.moto-tooltip-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+.moto-imagen {
+    padding: 30px;
+    width: 80%;
+    height: auto;
+   
+}
+
+.punto-interactivo {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+.tooltip{
+    font-size: 1.1rem;
+    width: 500px;
+    min-width: 600px; /* Ajusta el tamaño mínimo de la tooltip */
+    max-width: 700px;
+}
+
+/*----------------------------------SECCION 5 MOTO GIRA-------------------------*/
     .moto-giratoria {
-        flex-direction: row;
-        /* Cambia a diseño en fila para pantallas más grandes */
+        flex-direction: row; /* Cambia a diseño en fila para pantallas más grandes */
         align-items: center;
         justify-content: space-between;
     }
 
-
-
+    
+    #moto-nombre, #moto-descripcion{
+        
+        display: block;
+    }
+  
     .moto-imagen-container,
     .moto-detalle-container {
         flex: 1;
     }
-
+    
     .moto-imagen-container {
-        flex: 0 0 60%;
-        /* La imagen ocupa el 60% */
-        padding: 10px;
-        /* Puedes ajustar este padding si es necesario */
+        flex: 0 0 60%; /* La imagen ocupa el 60% */
+        padding: 10px; /* Puedes ajustar este padding si es necesario */
     }
-
+    
     .moto-detalle-container {
-        flex: 0 0 40%;
-        /* El texto ocupa el 40% */
-        padding-left: 50px;
-        /* Aumentar el padding para separar más el texto */
+        flex: 0 0 40%; /* El texto ocupa el 40% */
+        padding-left: 50px; /* Aumentar el padding para separar más el texto */
         padding-right: 50px;
-        padding-top: 20px;
-        /* Agregar padding adicional si lo deseas */
+        padding-top: 30px; /* Agregar padding adicional si lo deseas */
+        margin-top: 10px;
         padding-bottom: 20px;
         display: flex;
-        flex-direction: column;
-        /* Para alinear el logo y la descripción en columna */
-        justify-content: center;
-        /* Centrar verticalmente */
-        align-items: center;
-        /* Centrar horizontalmente */
-        text-align: justify;
-        /* Para centrar el texto también */
+    flex-direction: column; /* Para alinear el logo y la descripción en columna */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: justify; /* Para centrar el texto también */
     }
-
+    
     #imagen-moto-giratoria {
         width: 100%;
-        max-width: none;
-        /* Permitir que la imagen ocupe el 60% */
+        max-width: none; /* Permitir que la imagen ocupe el 60% */
         height: auto;
     }
-
-    #logo-gira {
-        padding: 30px;
-
-    }
-
-    #color-container {
-        flex-direction: row;
-        /* En desktop, los tanques vuelven a estar en fila */
-
-    }
-
-    .tanque-color {
-        width: 200px;
-        /* Tamaño más pequeño en mobile */
-        margin: 10px;
-        padding: 10px;
-        padding-bottom: 10px;
-        /* Reduce el espacio inferior */
-    }
-
-
-    /*------------------seccion 5 form-----------------------*/
-
-
-
-
-    /* Espaciado entre los campos del formulario */
-    .moto-detail-section .form-control,
-    .moto-detail-section .form-select,
-    .moto-detail-section textarea {
-        font-size: 1.1rem;
-        margin: 10px;
-        padding: 10px;
-        /* Mantener un padding compacto */
-
-    }
-
-    .form-container {
-        margin-top: 6px;
-        height: 500px;
-    }
-
-    .moto-image-container img {
-        max-width: 110%;
-        /* Ajusta el tamaño de la imagen según sea necesario */
-        height: 500px;
-    }
-
-
-
-    .moto-detail-section .form-container button {
-        margin-top: 40px;
-        /* Reducir el margen superior del botón */
-        font-size: 1.1 rem;
-    }
-
-    /* Estilos para wallpapers pantallas desktop --------------------------*/
-
-    .wallpaper-grid {
-
-
-        grid-template-columns: repeat(5, 1fr);
-        /* Cinco columnas en desktop */
-    }
-
-    .wallpaper-img {
-        width: 100%;
-        min-height: 250px;
-        /* Altura mínima para que todas las imágenes sean al menos de este tamaño */
-        max-height: 380px;
-        /* Limita la altura máxima para evitar que se estiren demasiado */
+    #logo-gira{
+        width: 40%;
+        height: auto;
         object-fit: cover;
-        /* Ajusta la imagen para que ocupe todo el espacio sin deformarse */
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+       
+    }
+
+
+    #titulo-tanque{
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    #color-container {
+        flex-direction: row; /* En desktop, los tanques vuelven a estar en fila */
+        gap: 5px;
+        margin: 25px ;
+    }
+
+    .color-option {
+        width: 15%; /* Permitir 4 elementos por fila en desktop */
+    }
+    
+   
+    
+    .color-nombre {
+        margin-top: 5px;
+        padding-bottom: 10px;
+        font-size: 1.3rem; /* Tamaño de fuente más grande para pantallas grandes */
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .tanque-color {
+        width: 80%; /* Ajusta el tamaño para ocupar más espacio en la fila */
+        height: auto;
+        object-fit: cover;
         cursor: pointer;
-        transition: transform 0.3s;
+        padding-bottom: 10px;
+        transition: transform 0.3s ease;
+    }
+    
+    .tanque-color:hover {
+        transform: scale(1.1); /* Efecto hover */
     }
 
 
 
-    #modal-image {
-        max-width: 90%;
-        max-height: 90%;
+/*------------------seccion 5 form-----------------------*/
+
+
+    /* Imagen: Ocupa el 100% de la altura del contenedor */
+    .moto-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 10px;
     }
 
-    #close-modal {
-
-        top: 30px;
-        right: 180px;
-        font-size: 36px;
+    #imagen-form {
+        width: 100%;             /* Ocupar todo el ancho del contenedor de imagen */
+        height: 100%;            /* Igualar la altura al formulario */
+        object-fit: cover;       /* Ajustar la imagen sin distorsión */
+        border-radius: 2px;      /* Opcional: esquinas redondeadas */
     }
+
+    /* Formulario: ocupando el 100% del alto disponible */
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;            /* Ajusta la altura al contenedor principal */
+        padding: 20px;           /* Espaciado interno del formulario */
+        background-color: var(--rojo-intenso);
+        border-radius: 2px;      /* Opcional: esquinas redondeadas */
+    }
+
+    /* Ajustes para el botón en pantallas grandes */
+    .form-container button {
+        width: 50%;              /* Ancho del botón en desktop */
+        align-self: center;
+    }
+
+
+
+
+/* Espaciado entre los campos del formulario */
+.moto-detail-section .form-control, 
+.moto-detail-section .form-select, 
+.moto-detail-section textarea {
+    font-size: 1.1rem;
+    margin: 10px;
+    padding: 10px; /* Mantener un padding compacto */
+    box-sizing: border-box;
+}
+
+/* Añade margen específico a la derecha e izquierda si quieres más separación */
+.form-container input, .form-container select, .form-container textarea {
+    margin: 0 15px; /* Margen lateral en cada campo del formulario */
+}
+/* Estilos para wallpapers pantallas desktop --------------------------*/
+
+.wallpaper-grid {
+   
+  
+    grid-template-columns: repeat(5, 1fr); /* Cinco columnas en desktop */
+}
+
+.wallpaper-img {
+    width: 100%;
+    min-height: 250px; /* Altura mínima para que todas las imágenes sean al menos de este tamaño */
+    max-height: 380px; /* Limita la altura máxima para evitar que se estiren demasiado */
+    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio sin deformarse */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+
+.wallpapers-title{
+    font-size: 2.4rem ;
+    font-weight: 900;
+}
+#modal-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#close-modal {
+   
+    top: 30px;
+    right: 180px;
+    font-size: 36px;
+}
 
 
 
