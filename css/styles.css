@@ -294,11 +294,11 @@ form input, form select {
 }
 /* Fondo para cada slide específico */
 .fondo-himalayan {
-    background-image: url('../img/hero/fondo-himalayan.jpg');
+    background-image: url('../img/hero/fondo-himalayan-mdq.jpg');
 }
 
 .fondo-shotgun {
-    background-image: url('../img/hero/fondo-shotgun.jpg');
+    background-image: url('../img/hero/fondo-shotgun-mdq.jpg');
 }
 .carousel-content {
     display: flex;
@@ -815,6 +815,12 @@ iframe {
 
 }
 
+.footer-contacto p{
+    padding: 5px;
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: 400;
+}
 .footer-bottom {
     font-size: smaller;
     font-weight: 100;
@@ -908,10 +914,7 @@ iframe {
         
     }
 
-  
-
-
-    /* Imagen de la moto */
+  /* Imagen de la moto */
     .moto-hero {
        order: 1;
         width: 80%;
@@ -1216,8 +1219,12 @@ iframe {
 
     }
 
-    .footer-contacto p {
-        font-size: 1 rem;
+   
+    .footer-contacto p{
+        padding: 5px;
+        font-size: 1.2rem;
+        line-height: 1.4;
+        font-weight: 400;
     }
 
     .footer-bottom {
@@ -1318,11 +1325,11 @@ iframe {
     }
     
     .fondo-himalayan {
-        background-image: url('../img/hero/fondo-himalayan.jpg');
+        background-image: url('../img/hero/fondo-himalayan-mdq.jpg');
     }
     
     .fondo-shotgun {
-        background-image: url('../img/hero/fondo-shotgun.jpg');
+        background-image: url('../img/hero/fondo-shotgun-mdq.jpg');
     }
     
     /* Capa semitransparente sobre la imagen */
@@ -1389,7 +1396,8 @@ iframe {
 
     .active .carousel-text {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(-50%);
+        transition: opacity 1s ease, transform 1s ease; 
     }
     /* Título grande y llamativo */
     .carousel-text h5 {
@@ -1406,8 +1414,14 @@ iframe {
         margin-bottom: 15px;
         letter-spacing: 2px;
         /* Más espacio entre letras */
+        transform: translateY(20px); /* Inicia un poco desplazado hacia abajo */
+        transition: opacity 1s ease, transform 1s ease; 
     }
 
+    .active .carousel-text h5 {
+        opacity: 1; /* Aparece suavemente */
+        transform: translateY(0); /* Vuelve a su posición original */
+    }
     /* Descripción estilizada */
     .carousel-text p {
         font-size: 2.5rem;
@@ -1442,6 +1456,12 @@ iframe {
         /* Añadir transformación */
         cursor: pointer;
     }
+/* Animación del botón */
+.active .btn-moto-link {
+    opacity: 1;
+    transform: translateY(0); /* Ajusta la posición para que no se "caiga" de golpe */
+    transition: opacity 1s ease, transform 1s ease; /* Asegura que el botón también tenga una transición suave */
+}
 
     /* Efecto hover en el botón */
     .btn-moto-link:hover {
@@ -1568,6 +1588,7 @@ iframe {
     .footer-links,
     .fat-footer p {
         text-align: left;
+        margin-bottom: 10px;
         /* Alinea el texto a la izquierda en desktop */
     }
 
@@ -1590,6 +1611,12 @@ iframe {
 
     }
 
+    .footer-contacto p{
+        padding: 5px;
+        font-size: 1.4rem;
+        line-height: 1.3;
+        font-weight: 400;
+    }
     /*---------------------------icono whatsapp--desktop-----------------*/
     .whatsapp-fixed {
         font-size: 4rem;
