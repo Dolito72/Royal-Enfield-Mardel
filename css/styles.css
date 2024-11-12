@@ -143,6 +143,113 @@ transform: scale(1.1);
     align-items: center;
 }
 
+/*------------------- Estilos generales para el pop-up -------------------------------------*/
+.popup-overlay {
+    display: none; /* Oculto inicialmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    overflow-y: auto; /* Permitir scroll en el contenedor si el contenido es alto */
+    
+}
+
+.popup-content {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 40px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px; /* Máxima anchura en desktop */
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-height: 90vh; /* Limitar altura para dispositivos más pequeños */
+    overflow-y: auto; /* Habilitar scroll en el contenido si es necesario */
+}
+
+/* Cerrar pop-up */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Título del formulario */
+.popup-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilos de los inputs */
+form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Botón de enviar */
+.submit-btn {
+    display: block;
+    width: 60%; /* Más ancho que antes */
+    margin: 0 auto; /* Centrado */
+    padding: 12px 20px; /* Más alto */
+    background-color: var(--amarillo) ;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: yellow; /* Cambia a negro en hover */
+}
+
+/* Media queries para landscape y desktop */
+@media (min-width: 600px) and (orientation: landscape) {
+    .popup-overlay {
+        display: none; /* Oculto inicialmente */
+    }
+    .popup-content {
+        max-width: 500px; /* Más ancho en landscape */
+    }
+}
+
+@media (min-width: 1024px) {
+    .popup-overlay {
+        display: none; /* Oculto inicialmente */
+    }
+    .popup-content {
+
+        max-width: 600px;
+    }
+}
+
+
+
+
 
 /* --------------------------------Sección Hero---------------------------------------- */
 
