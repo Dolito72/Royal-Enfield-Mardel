@@ -151,7 +151,7 @@ transform: scale(1.1);
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+    background-color: rgba(0, 0, 0, 0.8); /* Oscurece el fondo */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -298,7 +298,7 @@ form input, form select {
 }
 
 .fondo-shotgun {
-    background-image: url('../img/hero/fondo-shotgun-mdq.jpg');
+    background-image: url('../img/hero/Shotgun3-MDQ.png');
 }
 .carousel-content {
     display: flex;
@@ -374,17 +374,22 @@ form input, form select {
 }
 /*-------------------------------------gama carrousel motos--------------------------------*/
 /* Contenedor general del slider */
+
 .slider-container {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    margin: 2%;
+    margin: 2px;
+    overflow: hidden;
 
-    gap: 0.5cm;
+    gap: 0.3cm;
     width: 100%;
     background-color: var(--negro);
     scroll-behavior: smooth;
     /* Añadimos esto para suavizar el desplazamiento */
+    
+    transition: transform 0.5s ease-in-out; /* Agrega esta línea */
+    
 }
 
 .slider-container::-webkit-scrollbar {
@@ -396,16 +401,16 @@ form input, form select {
 .slider-wrapper {
     overflow: hidden;
     position: relative;
-    margin-right: 2%;
+    margin-right: 1%;
 
 }
 
 .slider-item {
     flex: 0 0 auto;
     scroll-snap-align: start;
-    width: 90%;
+    width: 95%;
     /* Ajuste para mobile */
-    max-width: 90%;
+    max-width: 95%;
     padding: 10px;
     background-size: cover;
     /* Asegura que la imagen de fondo cubra todo el área */
@@ -518,7 +523,7 @@ form input, form select {
 .custom-prev,
 .custom-next {
     position: absolute;
-    top: 50%;
+  
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.1);
     border: none;
@@ -528,7 +533,7 @@ form input, form select {
     cursor: pointer;
     z-index: 30;
 
-    top: 100%;
+    top: 90%;
     /* Ajusta la posición si es necesario */
 }
 
@@ -964,6 +969,9 @@ iframe {
         opacity: 1;
         transform: translateY(0);
     }
+    .carousel-control-next {
+        right: 10px; /* Coloca los botones por encima */
+    }
     /*-------------------------------------gama motos--------------------------------*/
     .slider-item {
         flex-direction: row;
@@ -995,7 +1003,15 @@ iframe {
     }
 
     /* Logo al costado de la moto */
-    .logo {
+   
+        .logo {
+            width: 150px; /* Ancho uniforme para todos los logos */
+            height: 80px; /* Altura uniforme para todos los logos */
+            object-fit: contain; /* Asegura que no se deformen */
+            margin: 0 auto; /* Centra horizontalmente */
+            display: block; /* Asegura que sea tratado como un bloque */
+        }
+        .logo3{
         padding-top: 2%;
         flex-basis: 10%;
         /* El logo ocupará el 30% del espacio disponible */
@@ -1046,8 +1062,8 @@ iframe {
     }
     
     .section-eventos-title {
-        font-weight: 700;
-        font-size: 2rem;
+        font-weight: 500;
+        font-size: 1.5rem;
     }
     
   
@@ -1311,7 +1327,7 @@ iframe {
     
     .hero {
         position: relative;
-        width: 100%;
+        width: 110%;
        
         overflow: hidden;
         background-color: var(--negro);
@@ -1321,7 +1337,7 @@ iframe {
         background-size: cover;
         background-position: bottom;
         background-repeat: no-repeat;
-        height: 100vh;
+        height: 90vh;
     }
     
     .fondo-himalayan {
@@ -1329,7 +1345,7 @@ iframe {
     }
     
     .fondo-shotgun {
-        background-image: url('../img/hero/fondo-shotgun-mdq.jpg');
+        background-image: url('../img/hero/Shotgun3-MDQ.png');
     }
     
     /* Capa semitransparente sobre la imagen */
@@ -1475,11 +1491,16 @@ iframe {
         /* Efecto de escalado al pasar el ratón */
     }
 
+ 
+ .carousel-control-next {
+    right: 100px; /* Coloca los botones por encima */
+}
 
     /*---------------------------------seccion modelos motos-----------------------------------------*/
     /* Estilos para los items del carrusel en desktop */
     .slider-wrapper {
-        margin: 5px;
+        margin: 2px;
+        overflow: hidden;
     }
 
     .slider-item {
@@ -1491,8 +1512,9 @@ iframe {
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
-        padding: 10px;
+        padding: 5px;
         transition: transform 0.5s ease;
+        height: 90vh;
     }
 
     /* Imagen de la moto */
@@ -1507,7 +1529,7 @@ iframe {
         display: block;
     }
 
- 
+    
     /* Logo */
     .logo {
         width: auto;
@@ -1518,6 +1540,9 @@ iframe {
         /* Limitar la altura para evitar que sea demasiado alto */
         margin: 10px auto;
         /* Espacio entre el logo y la moto */
+      
+        width: auto; /* Ajusta automáticamente */
+        height: auto; /* Mantiene la proporción */
         display: block;
         object-fit: contain;
         /* Para que los logos mantengan su proporción */

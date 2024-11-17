@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const testRideBtn = document.getElementById("testRideBtn");
     const testRidePopup = document.getElementById("popupOverlay");
+    testRidePopup.style.display = "none"; 
     const closePopup = document.getElementById("closeFormButton");
     const form = document.getElementById("testRideForm");
     const messageContainer = document.getElementById("messageContainer");
