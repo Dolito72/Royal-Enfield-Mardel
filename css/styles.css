@@ -647,11 +647,12 @@ form input, form select {
     transform: scale(1.1); /* Agrandar la imagen al hacer hover */
 }
 
-.eventos-video:hover .eventos-title {
-    opacity: 1; /* Mostrar el título al hacer hover */
-}
-.eventos-item:hover .eventos-title {
-    opacity: 1; /* Mostrar el título al hacer hover */
+
+
+/* Mostrar el título al hacer hover */
+.eventos-item:hover .eventos-title,
+.video-container:hover .eventos-title {
+    opacity: 1; /* Mostrar el título */
 }
 
 /*------------------Seccion form y contacto---------------------------------------------------------------------------*/
