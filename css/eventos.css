@@ -46,6 +46,17 @@
     height: 350px;
 
 }
+/*--------------------SECCION 2 VIDEO-----------------------*/
+.section-video {
+    margin: 0;
+    padding: 0;
+}
+#video {
+    margin: 0; /* Elimina los márgenes externos */
+    padding: 0; /* Elimina cualquier relleno interno */
+    border: none; /* Asegúrate de que no haya bordes */
+    display: block; /* Asegura que no haya espacios adicionales como elemento inline */
+}
 
 /* -----------------SECCION 3 - CARDS ----Estilos generales para la card */
 /* Fondo y texto de la sección */
@@ -161,11 +172,12 @@
     .card-container {
         grid-template-columns: repeat(2, 1fr);
     }
-     /* Centrar la última card cuando hay un total de 5 cards */
-     .card-container .card:nth-child(5) {
-        grid-column: 1 / -1; /* Ocupa ambas columnas */
-        justify-self: center; /* Centra la card sin expandir su ancho */
-    }
+     /* Centrar las últimas 2 cards cuando hay un total de 5 o 6 */
+     .card-container .card:nth-child(5),
+     .card-container .card:nth-child(6) {
+         grid-column: span 1; /* Cada card ocupa 1 columna */
+         justify-self: center; /* Centra cada card horizontalmente */
+     }
 
 }
 
@@ -187,10 +199,21 @@
     .card{
         margin-bottom: 30px;
     }
-    /* Centrar la última card cuando hay un total de 5 cards */
+    
+    /* Asegurar que las primeras 4 cards estén en la fila superior */
+    .card-container .card:nth-child(-n+4) {
+        grid-column: span 1; /* Cada una ocupa 1 columna */
+    }
+
+    /* Centrar las últimas 2 cards (5 y 6) en la fila inferior */
     .card-container .card:nth-child(5) {
-        grid-column: 2 / 4; /* Ocupa el espacio entre la segunda y tercera columna */
-        justify-self: center; /* Centra la card sin expandir su ancho */
+        grid-column: 2 / 3; /* Ocupa la segunda columna */
+        justify-self: center; /* Centra horizontalmente */
+    }
+
+    .card-container .card:nth-child(6) {
+        grid-column: 3 / 4; /* Ocupa la tercera columna */
+        justify-self: center; /* Centra horizontalmente */
     }
 
 }
