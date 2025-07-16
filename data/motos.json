@@ -1207,7 +1207,7 @@
             "cilindrada": "349 CC MONOCILÍNDRICO",
             "sistema": "ABS DUAL-CHANNEL",
             "luces": "Encendido automático",
-            "imagenForm": "../img/form/hntr.webp",
+            "imagenForm": "../img/form/hntr-2.webp",
             "video": "https://www.youtube.com/embed/uTzk_SyOgBQ?si=nW22Naw5wi9_3cqM",
             "imagenTooltip":"../img/tooplist/hntr.webp",
             "fondoTooltip":"../img/tooplist/logo-hntr-2.png",
@@ -1285,36 +1285,18 @@
                     ],
                     "tanque": "../img/giro/hntr/rebel-black.png"
                     
-                },
-                {
-                    "nombre": "Rebel Red",
-                    "imagenes": [
-                        "../img/giro/hntr/red-1.png",
-                        "../img/giro/hntr/red-2.png",
-                        "../img/giro/hntr/red-3.png",
-                        "../img/giro/hntr/red-5.png",
-                        "../img/giro/hntr/red-6.png",
-                        "../img/giro/hntr/red-7.png",
-                        "../img/giro/hntr/red-8.png",
-                        "../img/giro/hntr/red-9.png"
-                     
-
-                        
-                       
-                    ],
-                    "tanque": "../img/giro/hntr/rebel-red.png"
                 }
             ],
             "wallpapers": [
                 "../img/galeria/hntr/galeria-1.webp",
-                "../img/galeria/hntr/galeria-2.webp",
+                "../img/galeria/hntr/galeria-7.webp",
                 "../img/galeria/hntr/galeria-3.jpg",
                 "../img/galeria/hntr/galeria-4.webp",
                 "../img/galeria/hntr/galeria-5.webp",
                 "../img/galeria/hntr/galeria-6.jpg",
                 "../img/galeria/hntr/galeria-7.jpg",
                 "../img/galeria/hntr/gallery-7.jpg",
-                "../img/galeria/hntr/gallery-8.jpg",
+                "../img/galeria/hntr/galeria-6.webp",
                 "../img/galeria/hntr/gallery-10.jpg"
                 
             ]
