@@ -314,7 +314,7 @@ form input, form select {
     order: 3;
     width: 100%;
     /* Full width en mobile */
-    max-width: 400px;
+    max-width: 500px;
     /* Limitar el tamaño máximo */
     margin: 0 auto;
     /* Centrar en pantallas pequeñas */
@@ -344,6 +344,7 @@ form input, form select {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s ease-out;
+    margin-top: 10px;
 }
 
 /* Botón debajo del texto */
@@ -1394,7 +1395,8 @@ iframe {
 
 
     .logo-hero{
-        width: 300px;
+        width: 280px;
+        margin-bottom: 10px;
         z-index: 4;
     }
     /* Texto en tablet/desktop */
@@ -1450,6 +1452,7 @@ iframe {
         text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
         /* Sombra sutil para la descripción */
         margin-bottom: 30px;
+        
         letter-spacing: 1px;
     }
 

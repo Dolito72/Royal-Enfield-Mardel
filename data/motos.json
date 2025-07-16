@@ -908,7 +908,7 @@
         {
             "id": 7,
             "nombre": "Classic 350",
-            "logo": "../img/gama/logo-classic-350.png",
+            "logo": "../img/gama/logo-classic-blanco.png",
            
             "fondoHeader": "../img/gama/fondo-borroso-velocidad.jpg",
             "fondoHeader2": "../img/header/classic-2.png",
@@ -923,7 +923,7 @@
             "imagenForm": "../img/form/classic.jpg",
             "video": "https://www.youtube.com/embed/6AqNLRxiWHc?si=FVrSXfLrjRMynDsC",
             "imagenTooltip":"../img/tooplist/classic.png",
-            "fondoTooltip":"../img/tooplist/logo_classic.webp",
+            "fondoTooltip":"../img/tooplist/logo-classic-nuevo-negro.png",
             "detalles": [
                 {
                     "nombre": "FRENOS",
@@ -942,7 +942,7 @@
                 }
                
             ],
-            "logoGira": "../img/giro/classic/logo_classic.webp",
+            "logoGira": "../img/giro/classic/logo-classic-nuevo-negro.png",
             "descripcionGira": "La Classic 350 EFI es el significado perfecto de diseño, estilo, comodidad, y resistencia. Faros delanteros con forma de ojo de tigre y luces traseras vintage para un diseño clásico que se suman a su estilo.",
             "colores": [
                 {
